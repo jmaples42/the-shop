@@ -39,9 +39,19 @@ With no Firebase config the app runs in **demo mode**: sign-up and lists work bu
 
 To deploy by hand instead: `npm run build && npx firebase-tools deploy --only hosting`.
 
-## Weekly data
+## Weekly data and review
 
-The roundup task commits `public/data/<date>.json` and `public/data/current.json` to `main`, and the push triggers a deploy. `npm run build` runs `npm run validate` first, so a malformed file fails the deploy and leaves last week's site up instead of shipping broken data.
+Each Wednesday the roundup task:
+
+1. writes `public/data/<date>.json` and `public/data/current.json` on a branch named `weekly-deals/<date>`
+2. opens a pull request titled "Weekly deals: <dates>" with a summary of what changed and anything unverified
+3. `.github/workflows/preview.yml` validates and builds it, deploys it to a temporary preview site (expires in 7 days), and posts the preview link on the PR
+
+Review the preview on your phone. **Merge the PR to publish**; `deploy.yml` then puts it live. Close it to skip a week. Until you merge, the live site keeps last week's data.
+
+`npm run build` runs `npm run validate` first, so a malformed file fails the preview check and can't be deployed.
+
+Turn on branch protection for `main` (Settings → Branches) and require the "Preview" check so a failing week can't be merged by mistake.
 
 ## Data model (Firestore)
 

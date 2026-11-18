@@ -1,0 +1,31 @@
+# Weekly review: every pull request (including the weekly data PR) is validated,
+# built, and deployed to a temporary Firebase Hosting preview channel. The preview
+# URL is posted as a comment on the PR. Nothing goes live until the PR is merged.
+name: Preview
+on:
+  pull_request:
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      checks: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Write web config
+        run: printf '%s\n' "$FIREBASE_WEB_CONFIG" > .env.production.local
+        env:
+          FIREBASE_WEB_CONFIG: ${{ secrets.FIREBASE_WEB_CONFIG }}
+      - run: npm run build
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: ${{ vars.FIREBASE_PROJECT_ID }}
+          expires: 7d
