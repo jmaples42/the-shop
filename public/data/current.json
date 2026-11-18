@@ -1,0 +1,4438 @@
+{
+ "schemaVersion": 1,
+ "edition": "2026-11-18",
+ "title": "Nov 18–26, 2026",
+ "area": "West Bend, WI",
+ "summary": "Thanksgiving week: the deepest cuts are 99¢ eggs at Sendik's, sub-$1/lb frozen turkey and $1.99/lb spiral ham at Pick 'n Save, and $1.59/lb wings at Aldi. Ads run Nov 17/18 through Nov 25–26 (Outpost Co+op Deals to Dec 1).",
+ "generatedAt": "2026-11-18T19:21:00Z",
+ "sourceDoc": "https://claude.ai/artifact/Vwej1q251kixokxqpdW4td",
+ "stores": [
+  {
+   "id": "sendiks",
+   "name": "Sendik's",
+   "location": "West Bend",
+   "adStart": "2026-11-18",
+   "adEnd": "2026-11-26",
+   "dates": "Nov 18–26",
+   "priceType": "sale",
+   "notes": [
+    "Website says prices good 11/17–11/26; the ad pages say Nov 18–26.",
+    "Thanksgiving Day hours 7 AM–2 PM.",
+    "Wine and spirits condensed; full list in the ad."
+   ]
+  },
+  {
+   "id": "picknsave",
+   "name": "Pick 'n Save",
+   "location": "West Bend",
+   "adStart": "2026-11-18",
+   "adEnd": "2026-11-26",
+   "dates": "Nov 18–26",
+   "priceType": "sale",
+   "notes": [
+    "Prices from a third-party list (WeeklyAdHunters), not the official ad. Sizes, limits and digital-coupon conditions weren't shown; check the Pick 'n Save app."
+   ]
+  },
+  {
+   "id": "festival",
+   "name": "Festival Foods",
+   "location": "West Bend",
+   "adStart": "2026-11-18",
+   "adEnd": "2026-11-25",
+   "dates": "Nov 18–25",
+   "priceType": "sale",
+   "notes": [
+    "\"Card\" = Festival One Card price."
+   ]
+  },
+  {
+   "id": "aldi",
+   "name": "Aldi",
+   "location": "West Bend",
+   "adStart": "2026-11-18",
+   "dates": "From Nov 18",
+   "priceType": "sale",
+   "notes": [
+    "End date not stated; Aldi weeks normally run to the following Tuesday.",
+    "Aldi Finds condensed to highlights."
+   ]
+  },
+  {
+   "id": "outpost",
+   "name": "Outpost Co-op",
+   "location": "Mequon",
+   "adStart": "2026-11-18",
+   "adEnd": "2026-12-01",
+   "dates": "Fresh Deals Nov 18–25 · Co+op Deals Nov 18–Dec 1",
+   "priceType": "sale",
+   "notes": [
+    "Owner prices are marked.",
+    "Co+op Deals come from the Bay View store's list; Mequon may not carry every item."
+   ]
+  },
+  {
+   "id": "traderjoes",
+   "name": "Trader Joe's",
+   "location": "",
+   "dates": "Fearless Flyer, Thanksgiving 2026",
+   "priceType": "regular",
+   "notes": [
+    "Regular prices from the Fearless Flyer, not sales.",
+    "The flyer doesn't mark items new or returning; many are limited-time or seasonal."
+   ]
+  },
+  {
+   "id": "walmart",
+   "name": "Walmart",
+   "location": "West Bend",
+   "dates": "No weekly ad",
+   "priceType": "none",
+   "notes": [
+    "No store-level rollback prices found. Online prices may differ from the West Bend store."
+   ]
+  }
+ ],
+ "deals": [
+  {
+   "id": "picknsave-jennie-o-frozen-grade-a",
+   "storeId": "picknsave",
+   "department": "Turkey",
+   "name": "Jennie-O frozen Grade A turkey",
+   "price": "$0.48/lb"
+  },
+  {
+   "id": "picknsave-butterball-frozen",
+   "storeId": "picknsave",
+   "department": "Turkey",
+   "name": "Butterball frozen turkey",
+   "price": "$0.88/lb"
+  },
+  {
+   "id": "picknsave-fresh-butterball",
+   "storeId": "picknsave",
+   "department": "Turkey",
+   "name": "Fresh Butterball turkey",
+   "price": "$1.49/lb"
+  },
+  {
+   "id": "picknsave-jennie-o-turkey-breast",
+   "storeId": "picknsave",
+   "department": "Turkey",
+   "name": "Jennie-O turkey breast",
+   "price": "$11.99"
+  },
+  {
+   "id": "picknsave-kroger-hickory-smoked-spiral-ham",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Kroger hickory smoked spiral ham",
+   "price": "$1.99/lb"
+  },
+  {
+   "id": "picknsave-80-lean-ground-chuck",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "80% lean ground chuck",
+   "price": "$4.99/lb"
+  },
+  {
+   "id": "picknsave-black-angus-boneless-chuck-roast",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Black Angus boneless chuck roast",
+   "price": "$8.99/lb"
+  },
+  {
+   "id": "picknsave-bone-in-ribeye-roast",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Bone-in ribeye roast",
+   "price": "$11.99/lb"
+  },
+  {
+   "id": "picknsave-atlantic-salmon-fillets",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Atlantic salmon fillets",
+   "price": "$9.99/lb"
+  },
+  {
+   "id": "picknsave-kroger-peeled-deveined-shrimp",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Kroger peeled & deveined shrimp",
+   "price": "$6.99/lb"
+  },
+  {
+   "id": "picknsave-kroger-small-shrimp-tray",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Kroger small shrimp tray",
+   "price": "$5.99"
+  },
+  {
+   "id": "picknsave-perdue-boneless-chicken-breasts",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Perdue boneless chicken breasts",
+   "price": "$7.99"
+  },
+  {
+   "id": "picknsave-fully-cooked-baby-back-ribs",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Fully cooked baby back ribs",
+   "price": "$10.99"
+  },
+  {
+   "id": "picknsave-cooked-meatballs",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Cooked meatballs",
+   "price": "$6.99"
+  },
+  {
+   "id": "picknsave-eckrich-smoked-sausage-or-carando-meatballs",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Eckrich smoked sausage or Carando meatballs",
+   "price": "$5"
+  },
+  {
+   "id": "picknsave-kroger-beef-bacon",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Kroger beef bacon",
+   "price": "$6.99"
+  },
+  {
+   "id": "picknsave-oscar-mayer-bacon",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Oscar Mayer bacon",
+   "price": "$3.99"
+  },
+  {
+   "id": "picknsave-jimmy-dean-sausage-roll-or-bob-evans-sides",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Jimmy Dean sausage roll or Bob Evans sides",
+   "price": "$2.99"
+  },
+  {
+   "id": "picknsave-lit-l-smokies-or-bridgford-pepperoni",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Lit'l Smokies or Bridgford pepperoni",
+   "price": "2/$7"
+  },
+  {
+   "id": "picknsave-private-selection-pepperoni-or-salami",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Private Selection pepperoni or salami",
+   "price": "$7.99"
+  },
+  {
+   "id": "picknsave-oscar-mayer-deli-fresh-or-claussen-pickles",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Oscar Mayer Deli Fresh or Claussen pickles",
+   "price": "$3.49"
+  },
+  {
+   "id": "picknsave-hormel-party-tray",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Hormel party tray",
+   "price": "$17.49"
+  },
+  {
+   "id": "picknsave-holiday-ham-or-turkey-dinner",
+   "storeId": "picknsave",
+   "department": "Meat and seafood",
+   "name": "Holiday ham or turkey dinner",
+   "price": "$79.99"
+  },
+  {
+   "id": "picknsave-sweet-potatoes",
+   "storeId": "picknsave",
+   "department": "Produce",
+   "name": "Sweet potatoes",
+   "price": "$0.49/lb"
+  },
+  {
+   "id": "picknsave-smartway-russet-potatoes",
+   "storeId": "picknsave",
+   "department": "Produce",
+   "name": "Smartway russet potatoes",
+   "price": "$2.99"
+  },
+  {
+   "id": "picknsave-cuties",
+   "storeId": "picknsave",
+   "department": "Produce",
+   "name": "Cuties",
+   "price": "$2.99"
+  },
+  {
+   "id": "picknsave-seedless-grapes",
+   "storeId": "picknsave",
+   "department": "Produce",
+   "name": "Seedless grapes",
+   "price": "$2.49/lb"
+  },
+  {
+   "id": "picknsave-raspberries-or-blackberries",
+   "storeId": "picknsave",
+   "department": "Produce",
+   "name": "Raspberries or blackberries",
+   "price": "$3.99"
+  },
+  {
+   "id": "picknsave-jumbo-blueberries",
+   "storeId": "picknsave",
+   "department": "Produce",
+   "name": "Jumbo blueberries",
+   "price": "$5.99"
+  },
+  {
+   "id": "picknsave-kroger-carrots",
+   "storeId": "picknsave",
+   "department": "Produce",
+   "name": "Kroger carrots",
+   "price": "$2.49"
+  },
+  {
+   "id": "picknsave-greens",
+   "storeId": "picknsave",
+   "department": "Produce",
+   "name": "Greens",
+   "price": "$1.49"
+  },
+  {
+   "id": "picknsave-cranberries-or-pom",
+   "storeId": "picknsave",
+   "department": "Produce",
+   "name": "Cranberries or POM",
+   "price": "2/$5"
+  },
+  {
+   "id": "picknsave-kroger-bagged-or-simple-truth-organic-veggies",
+   "storeId": "picknsave",
+   "department": "Produce",
+   "name": "Kroger bagged or Simple Truth organic veggies",
+   "price": "$6"
+  },
+  {
+   "id": "picknsave-simple-truth-organic-herbs",
+   "storeId": "picknsave",
+   "department": "Produce",
+   "name": "Simple Truth organic herbs",
+   "price": "$1.99"
+  },
+  {
+   "id": "picknsave-bruce-s-yams",
+   "storeId": "picknsave",
+   "department": "Produce",
+   "name": "Bruce's yams",
+   "price": "2/$7"
+  },
+  {
+   "id": "picknsave-kroger-large-grade-aa-eggs",
+   "storeId": "picknsave",
+   "department": "Dairy",
+   "name": "Kroger large Grade AA eggs",
+   "price": "$1.49"
+  },
+  {
+   "id": "picknsave-kroger-butter",
+   "storeId": "picknsave",
+   "department": "Dairy",
+   "name": "Kroger butter",
+   "price": "$1.99"
+  },
+  {
+   "id": "picknsave-roundy-s-select-milk",
+   "storeId": "picknsave",
+   "department": "Dairy",
+   "name": "Roundy's Select milk",
+   "price": "$2.49"
+  },
+  {
+   "id": "picknsave-roundy-s-cheese",
+   "storeId": "picknsave",
+   "department": "Dairy",
+   "name": "Roundy's cheese",
+   "price": "$4.99"
+  },
+  {
+   "id": "picknsave-sargento-shredded",
+   "storeId": "picknsave",
+   "department": "Dairy",
+   "name": "Sargento shredded",
+   "price": "$1.99"
+  },
+  {
+   "id": "picknsave-philadelphia-cream-cheese-or-kroger-ice-cream",
+   "storeId": "picknsave",
+   "department": "Dairy",
+   "name": "Philadelphia cream cheese or Kroger ice cream",
+   "price": "$1.99"
+  },
+  {
+   "id": "picknsave-kroger-sour-cream",
+   "storeId": "picknsave",
+   "department": "Dairy",
+   "name": "Kroger sour cream",
+   "price": "3/$5"
+  },
+  {
+   "id": "picknsave-coffee-mate",
+   "storeId": "picknsave",
+   "department": "Dairy",
+   "name": "Coffee-mate",
+   "price": "$2.99"
+  },
+  {
+   "id": "picknsave-carnation-evaporated-milk",
+   "storeId": "picknsave",
+   "department": "Dairy",
+   "name": "Carnation evaporated milk",
+   "price": "$1.49"
+  },
+  {
+   "id": "picknsave-private-selection-brie",
+   "storeId": "picknsave",
+   "department": "Dairy",
+   "name": "Private Selection brie",
+   "price": "$5.99"
+  },
+  {
+   "id": "picknsave-private-selection-cheese-cubes",
+   "storeId": "picknsave",
+   "department": "Dairy",
+   "name": "Private Selection cheese cubes",
+   "price": "$4.99"
+  },
+  {
+   "id": "picknsave-kroger-bread",
+   "storeId": "picknsave",
+   "department": "Bakery and baking",
+   "name": "Kroger bread",
+   "price": "$1.99"
+  },
+  {
+   "id": "picknsave-kroger-rolls",
+   "storeId": "picknsave",
+   "department": "Bakery and baking",
+   "name": "Kroger rolls",
+   "price": "2/$3"
+  },
+  {
+   "id": "picknsave-king-s-hawaiian-rolls",
+   "storeId": "picknsave",
+   "department": "Bakery and baking",
+   "name": "King's Hawaiian rolls",
+   "price": "$6.99"
+  },
+  {
+   "id": "picknsave-pillsbury-grands-crescents-or-cinnamon-rolls",
+   "storeId": "picknsave",
+   "department": "Bakery and baking",
+   "name": "Pillsbury Grands, crescents or cinnamon rolls",
+   "price": "$1.99"
+  },
+  {
+   "id": "picknsave-pepperidge-farm-cookies-or-farmhouse-bread",
+   "storeId": "picknsave",
+   "department": "Bakery and baking",
+   "name": "Pepperidge Farm cookies or Farmhouse bread",
+   "price": "$3.99"
+  },
+  {
+   "id": "picknsave-pumpkin-or-apple-pie",
+   "storeId": "picknsave",
+   "department": "Bakery and baking",
+   "name": "Pumpkin or apple pie",
+   "price": "$5"
+  },
+  {
+   "id": "picknsave-marie-callender-s-pies",
+   "storeId": "picknsave",
+   "department": "Bakery and baking",
+   "name": "Marie Callender's pies",
+   "price": "$5.99"
+  },
+  {
+   "id": "picknsave-kroger-pie-crust",
+   "storeId": "picknsave",
+   "department": "Bakery and baking",
+   "name": "Kroger pie crust",
+   "price": "2/$5"
+  },
+  {
+   "id": "picknsave-kroger-pumpkin",
+   "storeId": "picknsave",
+   "department": "Bakery and baking",
+   "name": "Kroger pumpkin",
+   "price": "4/$5"
+  },
+  {
+   "id": "picknsave-kroger-brown-or-powdered-sugar",
+   "storeId": "picknsave",
+   "department": "Bakery and baking",
+   "name": "Kroger brown or powdered sugar",
+   "price": "$2"
+  },
+  {
+   "id": "picknsave-toll-house-morsels-or-dough",
+   "storeId": "picknsave",
+   "department": "Bakery and baking",
+   "name": "Toll House morsels or dough",
+   "price": "$3.49"
+  },
+  {
+   "id": "picknsave-reddi-wip-or-krusteaz",
+   "storeId": "picknsave",
+   "department": "Bakery and baking",
+   "name": "Reddi-wip or Krusteaz",
+   "price": "$1.99"
+  },
+  {
+   "id": "picknsave-kroger-frozen-vegetables-or-betty-crocker-cake-m",
+   "storeId": "picknsave",
+   "department": "Bakery and baking",
+   "name": "Kroger frozen vegetables or Betty Crocker cake mix",
+   "price": "2/$3"
+  },
+  {
+   "id": "picknsave-stove-top",
+   "storeId": "picknsave",
+   "department": "Pantry",
+   "name": "Stove Top",
+   "price": "$1.48"
+  },
+  {
+   "id": "picknsave-oroweat-or-pepperidge-farm-stuffing",
+   "storeId": "picknsave",
+   "department": "Pantry",
+   "name": "Oroweat or Pepperidge Farm stuffing",
+   "price": "2/$6"
+  },
+  {
+   "id": "picknsave-del-monte-vegetables-or-campbell-s-cream-soups",
+   "storeId": "picknsave",
+   "department": "Pantry",
+   "name": "Del Monte vegetables or Campbell's cream soups",
+   "price": "10/$10"
+  },
+  {
+   "id": "picknsave-heinz-gravy-or-cool-whip",
+   "storeId": "picknsave",
+   "department": "Pantry",
+   "name": "Heinz gravy or Cool Whip",
+   "price": "2/$4"
+  },
+  {
+   "id": "picknsave-swanson-broth-or-olives",
+   "storeId": "picknsave",
+   "department": "Pantry",
+   "name": "Swanson broth or olives",
+   "price": "2/$4"
+  },
+  {
+   "id": "picknsave-rotel-or-hunt-s",
+   "storeId": "picknsave",
+   "department": "Pantry",
+   "name": "Rotel or Hunt's",
+   "price": "3/$4"
+  },
+  {
+   "id": "picknsave-barilla",
+   "storeId": "picknsave",
+   "department": "Pantry",
+   "name": "Barilla",
+   "price": "4/$5"
+  },
+  {
+   "id": "picknsave-rao-s",
+   "storeId": "picknsave",
+   "department": "Pantry",
+   "name": "Rao's",
+   "price": "$6.49"
+  },
+  {
+   "id": "picknsave-ocean-spray-cranberry-sauce",
+   "storeId": "picknsave",
+   "department": "Pantry",
+   "name": "Ocean Spray cranberry sauce",
+   "price": "$2.29"
+  },
+  {
+   "id": "picknsave-kroger-peanuts",
+   "storeId": "picknsave",
+   "department": "Pantry",
+   "name": "Kroger peanuts",
+   "price": "$1"
+  },
+  {
+   "id": "picknsave-hershey-s",
+   "storeId": "picknsave",
+   "department": "Pantry",
+   "name": "Hershey's",
+   "price": "25% off"
+  },
+  {
+   "id": "picknsave-ritz-or-nabisco-snack-crackers",
+   "storeId": "picknsave",
+   "department": "Snacks and drinks",
+   "name": "Ritz or Nabisco snack crackers",
+   "price": "$1.99"
+  },
+  {
+   "id": "picknsave-club-or-town-house",
+   "storeId": "picknsave",
+   "department": "Snacks and drinks",
+   "name": "Club or Town House",
+   "price": "$2.99"
+  },
+  {
+   "id": "picknsave-oreo-or-chips-ahoy-family-size",
+   "storeId": "picknsave",
+   "department": "Snacks and drinks",
+   "name": "Oreo or Chips Ahoy family size",
+   "price": "$3.99"
+  },
+  {
+   "id": "picknsave-folgers-or-caf-bustelo",
+   "storeId": "picknsave",
+   "department": "Snacks and drinks",
+   "name": "Folgers or Café Bustelo",
+   "price": "$9.99"
+  },
+  {
+   "id": "picknsave-coca-cola-or-sprite",
+   "storeId": "picknsave",
+   "department": "Snacks and drinks",
+   "name": "Coca-Cola or Sprite",
+   "price": "$1.49"
+  },
+  {
+   "id": "picknsave-big-k-soda",
+   "storeId": "picknsave",
+   "department": "Snacks and drinks",
+   "name": "Big K soda",
+   "price": "$1"
+  },
+  {
+   "id": "picknsave-tropicana-or-gold-peak",
+   "storeId": "picknsave",
+   "department": "Snacks and drinks",
+   "name": "Tropicana or Gold Peak",
+   "price": "2/$6"
+  },
+  {
+   "id": "picknsave-ore-ida",
+   "storeId": "picknsave",
+   "department": "Frozen",
+   "name": "Ore-Ida",
+   "price": "$2.99"
+  },
+  {
+   "id": "picknsave-brew-pub-or-screamin-sicilian-pizza",
+   "storeId": "picknsave",
+   "department": "Frozen",
+   "name": "Brew Pub or Screamin' Sicilian pizza",
+   "price": "$5.99"
+  },
+  {
+   "id": "picknsave-reynolds-wrap",
+   "storeId": "picknsave",
+   "department": "Household",
+   "name": "Reynolds Wrap",
+   "price": "$4.99"
+  },
+  {
+   "id": "picknsave-rubbermaid-takealongs",
+   "storeId": "picknsave",
+   "department": "Household",
+   "name": "Rubbermaid TakeAlongs",
+   "price": "$3.49"
+  },
+  {
+   "id": "festival-boneless-skinless-chicken-breasts",
+   "storeId": "festival",
+   "department": "Meat",
+   "name": "Boneless skinless chicken breasts",
+   "price": "$5.99/lb"
+  },
+  {
+   "id": "festival-93-black-angus-ground-beef",
+   "storeId": "festival",
+   "department": "Meat",
+   "name": "93% Black Angus ground beef",
+   "price": "$7.99/lb"
+  },
+  {
+   "id": "festival-boneless-half-pork-loin",
+   "storeId": "festival",
+   "department": "Meat",
+   "name": "Boneless half pork loin",
+   "price": "BOGO"
+  },
+  {
+   "id": "festival-choice-ribeye-roast-or-steak",
+   "storeId": "festival",
+   "department": "Meat",
+   "name": "Choice ribeye roast or steak",
+   "price": "$18.99/lb"
+  },
+  {
+   "id": "festival-jennie-o-fresh-whole-turkey-12-20-lb",
+   "storeId": "festival",
+   "department": "Meat",
+   "name": "Jennie-O fresh whole turkey 12–20 lb",
+   "price": "$2.29/lb"
+  },
+  {
+   "id": "festival-frozen-whole-turkey-breast",
+   "storeId": "festival",
+   "department": "Meat",
+   "name": "Frozen whole turkey breast",
+   "price": "$2.49/lb"
+  },
+  {
+   "id": "festival-hormel-cure-81-spiral-half-ham",
+   "storeId": "festival",
+   "department": "Meat",
+   "name": "Hormel Cure 81 spiral half ham",
+   "price": "$2.79/lb"
+  },
+  {
+   "id": "festival-festival-double-smoked-bone-in-ham",
+   "storeId": "festival",
+   "department": "Meat",
+   "name": "Festival double smoked bone-in ham",
+   "price": "$3.69/lb"
+  },
+  {
+   "id": "festival-frick-s-quarter-pit-ham",
+   "storeId": "festival",
+   "department": "Meat",
+   "name": "Frick's quarter pit ham",
+   "price": "$6.49/lb"
+  },
+  {
+   "id": "festival-hormel-black-label-bacon",
+   "storeId": "festival",
+   "department": "Meat",
+   "name": "Hormel Black Label bacon",
+   "price": "$5.99"
+  },
+  {
+   "id": "festival-jimmy-dean-roll",
+   "storeId": "festival",
+   "department": "Meat",
+   "name": "Jimmy Dean roll",
+   "price": "$4.99"
+  },
+  {
+   "id": "festival-breakfast-or-italian-sausage",
+   "storeId": "festival",
+   "department": "Meat",
+   "name": "Breakfast or Italian sausage",
+   "price": "$4.29"
+  },
+  {
+   "id": "festival-festival-potato-or-italian-sausage-links",
+   "storeId": "festival",
+   "department": "Meat",
+   "name": "Festival potato or Italian sausage links",
+   "price": "$5.99"
+  },
+  {
+   "id": "festival-lit-l-smokies",
+   "storeId": "festival",
+   "department": "Meat",
+   "name": "Lit'l Smokies",
+   "price": "$3.84"
+  },
+  {
+   "id": "festival-aqua-star-cooked-shrimp-16-oz",
+   "storeId": "festival",
+   "department": "Meat",
+   "name": "Aqua Star cooked shrimp 16 oz",
+   "price": "$9.99"
+  },
+  {
+   "id": "festival-simek-s-meatballs",
+   "storeId": "festival",
+   "department": "Meat",
+   "name": "Simek's meatballs",
+   "price": "$8.99"
+  },
+  {
+   "id": "festival-eddie-m-s-shrimp-cocktail-or-sea-leg-tray",
+   "storeId": "festival",
+   "department": "Meat",
+   "name": "Eddie M's shrimp cocktail or sea leg tray",
+   "price": "$9.99"
+  },
+  {
+   "id": "festival-cherrywood-ham",
+   "storeId": "festival",
+   "department": "Deli",
+   "name": "Cherrywood ham",
+   "price": "$7.99/lb"
+  },
+  {
+   "id": "festival-turkey-breast",
+   "storeId": "festival",
+   "department": "Deli",
+   "name": "Turkey breast",
+   "price": "$9.99/lb"
+  },
+  {
+   "id": "festival-roast-beef",
+   "storeId": "festival",
+   "department": "Deli",
+   "name": "Roast beef",
+   "price": "$14.99/lb"
+  },
+  {
+   "id": "festival-rotini-salad",
+   "storeId": "festival",
+   "department": "Deli",
+   "name": "Rotini salad",
+   "price": "$7.49/lb"
+  },
+  {
+   "id": "festival-krabmeat-salad",
+   "storeId": "festival",
+   "department": "Deli",
+   "name": "Krabmeat salad",
+   "price": "$8.49/lb"
+  },
+  {
+   "id": "festival-broccoli-salads",
+   "storeId": "festival",
+   "department": "Deli",
+   "name": "Broccoli salads",
+   "price": "$9.49/lb"
+  },
+  {
+   "id": "festival-cranberry-chicken-pasta-salad",
+   "storeId": "festival",
+   "department": "Deli",
+   "name": "Cranberry chicken pasta salad",
+   "price": "$9.49/lb"
+  },
+  {
+   "id": "festival-potato-salad",
+   "storeId": "festival",
+   "department": "Deli",
+   "name": "Potato salad",
+   "price": "$4.99/lb"
+  },
+  {
+   "id": "festival-scalloped-potatoes-2-5-lb",
+   "storeId": "festival",
+   "department": "Deli",
+   "name": "Scalloped potatoes 2.5 lb",
+   "price": "$14.99"
+  },
+  {
+   "id": "festival-spinach-or-dill-dip",
+   "storeId": "festival",
+   "department": "Deli",
+   "name": "Spinach or dill dip",
+   "price": "$5.49"
+  },
+  {
+   "id": "festival-sartori-cheddar",
+   "storeId": "festival",
+   "department": "Deli",
+   "name": "Sartori cheddar",
+   "price": "$5.99"
+  },
+  {
+   "id": "festival-gouda",
+   "storeId": "festival",
+   "department": "Deli",
+   "name": "Gouda",
+   "price": "$7.99"
+  },
+  {
+   "id": "festival-negroni-salami-or-prosciutto",
+   "storeId": "festival",
+   "department": "Deli",
+   "name": "Negroni salami or prosciutto",
+   "price": "$1 off"
+  },
+  {
+   "id": "festival-veggie-tray-26-oz",
+   "storeId": "festival",
+   "department": "Deli",
+   "name": "Veggie tray 26 oz",
+   "price": "$12.99"
+  },
+  {
+   "id": "festival-honeycrisp-tote",
+   "storeId": "festival",
+   "department": "Produce",
+   "name": "Honeycrisp tote",
+   "price": "$2.99/lb"
+  },
+  {
+   "id": "festival-wi-cranberries",
+   "storeId": "festival",
+   "department": "Produce",
+   "name": "WI cranberries",
+   "price": "$2.99"
+  },
+  {
+   "id": "festival-yams",
+   "storeId": "festival",
+   "department": "Produce",
+   "name": "Yams",
+   "price": "$1.69/lb"
+  },
+  {
+   "id": "festival-hardshell-squash",
+   "storeId": "festival",
+   "department": "Produce",
+   "name": "Hardshell squash",
+   "price": "$0.99/lb"
+  },
+  {
+   "id": "festival-yukon-or-russet-5-lb",
+   "storeId": "festival",
+   "department": "Produce",
+   "name": "Yukon or russet 5 lb",
+   "price": "$2.99"
+  },
+  {
+   "id": "festival-organic-brussels",
+   "storeId": "festival",
+   "department": "Produce",
+   "name": "Organic Brussels",
+   "price": "$3.99"
+  },
+  {
+   "id": "festival-organic-spring-mix-1-lb",
+   "storeId": "festival",
+   "department": "Produce",
+   "name": "Organic spring mix 1 lb",
+   "price": "$6.99"
+  },
+  {
+   "id": "festival-organic-potatoes-3-lb",
+   "storeId": "festival",
+   "department": "Produce",
+   "name": "Organic potatoes 3 lb",
+   "price": "$3.99"
+  },
+  {
+   "id": "festival-poppies-mandarins-2-lb",
+   "storeId": "festival",
+   "department": "Produce",
+   "name": "Poppies mandarins 2 lb",
+   "price": "$3.99"
+  },
+  {
+   "id": "festival-fresh-express-salad",
+   "storeId": "festival",
+   "department": "Produce",
+   "name": "Fresh Express salad",
+   "price": "$2.99",
+   "conditions": "card"
+  },
+  {
+   "id": "festival-simply-potatoes",
+   "storeId": "festival",
+   "department": "Produce",
+   "name": "Simply Potatoes",
+   "price": "2/$5"
+  },
+  {
+   "id": "festival-apple-cider-gal",
+   "storeId": "festival",
+   "department": "Produce",
+   "name": "Apple cider ½ gal",
+   "price": "$5.99"
+  },
+  {
+   "id": "festival-guacamole-or-pico-16-14-oz",
+   "storeId": "festival",
+   "department": "Produce",
+   "name": "Guacamole or pico 16/14 oz",
+   "price": "$5.99"
+  },
+  {
+   "id": "festival-stuffing-mix-14-oz",
+   "storeId": "festival",
+   "department": "Produce",
+   "name": "Stuffing mix 14 oz",
+   "price": "$4.99"
+  },
+  {
+   "id": "festival-essential-everyday-butter-1-lb",
+   "storeId": "festival",
+   "department": "Dairy",
+   "name": "Essential Everyday butter 1 lb",
+   "price": "$2.99"
+  },
+  {
+   "id": "festival-heavy-cream-16-oz",
+   "storeId": "festival",
+   "department": "Dairy",
+   "name": "Heavy cream 16 oz",
+   "price": "$3.49"
+  },
+  {
+   "id": "festival-half-half",
+   "storeId": "festival",
+   "department": "Dairy",
+   "name": "Half & half",
+   "price": "$2.76"
+  },
+  {
+   "id": "festival-kraft-shredded-chunk",
+   "storeId": "festival",
+   "department": "Dairy",
+   "name": "Kraft shredded/chunk",
+   "price": "$2.99"
+  },
+  {
+   "id": "festival-philadelphia",
+   "storeId": "festival",
+   "department": "Dairy",
+   "name": "Philadelphia",
+   "price": "$2.99"
+  },
+  {
+   "id": "festival-daisy-sour-cream",
+   "storeId": "festival",
+   "department": "Dairy",
+   "name": "Daisy sour cream",
+   "price": "$2.49"
+  },
+  {
+   "id": "festival-kemps-cottage-cheese",
+   "storeId": "festival",
+   "department": "Dairy",
+   "name": "Kemps cottage cheese",
+   "price": "$2.89"
+  },
+  {
+   "id": "festival-kemps-chocolate-or-trumoo",
+   "storeId": "festival",
+   "department": "Dairy",
+   "name": "Kemps chocolate or TruMoo",
+   "price": "$3.69"
+  },
+  {
+   "id": "festival-oui-yogurt",
+   "storeId": "festival",
+   "department": "Dairy",
+   "name": "Oui yogurt",
+   "price": "2/$3"
+  },
+  {
+   "id": "festival-coffee-mate",
+   "storeId": "festival",
+   "department": "Dairy",
+   "name": "Coffee-mate",
+   "price": "$4.33"
+  },
+  {
+   "id": "festival-pillsbury-rolls-biscuits",
+   "storeId": "festival",
+   "department": "Dairy",
+   "name": "Pillsbury rolls/biscuits",
+   "price": "$2.89"
+  },
+  {
+   "id": "festival-pillsbury-pie-crust",
+   "storeId": "festival",
+   "department": "Dairy",
+   "name": "Pillsbury pie crust",
+   "price": "$3.49"
+  },
+  {
+   "id": "festival-top-the-tater",
+   "storeId": "festival",
+   "department": "Dairy",
+   "name": "Top the Tater",
+   "price": "$2.68"
+  },
+  {
+   "id": "festival-festival-apple-pie",
+   "storeId": "festival",
+   "department": "Bakery",
+   "name": "Festival apple pie",
+   "price": "$9.99"
+  },
+  {
+   "id": "festival-pumpkin-pie",
+   "storeId": "festival",
+   "department": "Bakery",
+   "name": "Pumpkin pie",
+   "price": "$5.99"
+  },
+  {
+   "id": "festival-cream-pie",
+   "storeId": "festival",
+   "department": "Bakery",
+   "name": "Cream pie",
+   "price": "$9.99"
+  },
+  {
+   "id": "festival-cinnamon-rolls",
+   "storeId": "festival",
+   "department": "Bakery",
+   "name": "Cinnamon rolls",
+   "price": "$4.99"
+  },
+  {
+   "id": "festival-piccolo-rolls",
+   "storeId": "festival",
+   "department": "Bakery",
+   "name": "Piccolo rolls",
+   "price": "$3.49"
+  },
+  {
+   "id": "festival-baguette",
+   "storeId": "festival",
+   "department": "Bakery",
+   "name": "Baguette",
+   "price": "$2.99"
+  },
+  {
+   "id": "festival-baguette-slices",
+   "storeId": "festival",
+   "department": "Bakery",
+   "name": "Baguette slices",
+   "price": "$3.69"
+  },
+  {
+   "id": "festival-sourdough-20-oz",
+   "storeId": "festival",
+   "department": "Bakery",
+   "name": "Sourdough 20 oz",
+   "price": "$4.99"
+  },
+  {
+   "id": "festival-pull-apart",
+   "storeId": "festival",
+   "department": "Bakery",
+   "name": "Pull-apart",
+   "price": "$4.99"
+  },
+  {
+   "id": "festival-cheesecakes",
+   "storeId": "festival",
+   "department": "Bakery",
+   "name": "Cheesecakes",
+   "price": "$16.99–19.99"
+  },
+  {
+   "id": "festival-essential-everyday-brown-or-powdered-sugar-2-lb",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Essential Everyday brown or powdered sugar 2 lb",
+   "price": "$0.99",
+   "conditions": "card, limit 4"
+  },
+  {
+   "id": "festival-ee-vegetables",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "EE vegetables",
+   "price": "$0.84"
+  },
+  {
+   "id": "festival-stove-top",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Stove Top",
+   "price": "$1.99"
+  },
+  {
+   "id": "festival-heinz-gravy",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Heinz gravy",
+   "price": "$2.49"
+  },
+  {
+   "id": "festival-ocean-spray-sauce",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Ocean Spray sauce",
+   "price": "$2.57"
+  },
+  {
+   "id": "festival-idahoan",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Idahoan",
+   "price": "$1.56"
+  },
+  {
+   "id": "festival-campbell-s-cream-soups",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Campbell's cream soups",
+   "price": "2/$3"
+  },
+  {
+   "id": "festival-kitchen-basics-stock",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Kitchen Basics stock",
+   "price": "$2.99"
+  },
+  {
+   "id": "festival-ben-s-rice",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Ben's rice",
+   "price": "$2.42"
+  },
+  {
+   "id": "festival-olives",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Olives",
+   "price": "$1.99"
+  },
+  {
+   "id": "festival-marshmallows",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Marshmallows",
+   "price": "$1.59"
+  },
+  {
+   "id": "festival-pecans-or-walnuts",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Pecans or walnuts",
+   "price": "$6.99"
+  },
+  {
+   "id": "festival-del-monte-fruit",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Del Monte fruit",
+   "price": "2/$5"
+  },
+  {
+   "id": "festival-skippy",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Skippy",
+   "price": "$2.99"
+  },
+  {
+   "id": "festival-kraft-dressing",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Kraft dressing",
+   "price": "$2.99"
+  },
+  {
+   "id": "festival-hellmann-s",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Hellmann's",
+   "price": "$6.45"
+  },
+  {
+   "id": "festival-hidden-valley",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Hidden Valley",
+   "price": "$5.37"
+  },
+  {
+   "id": "festival-oroweat-stuffing",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Oroweat stuffing",
+   "price": "$3.49"
+  },
+  {
+   "id": "festival-reddi-wip",
+   "storeId": "festival",
+   "department": "Baking and pantry",
+   "name": "Reddi-wip",
+   "price": "$3.20"
+  },
+  {
+   "id": "festival-cool-whip",
+   "storeId": "festival",
+   "department": "Frozen",
+   "name": "Cool Whip",
+   "price": "$1.99"
+  },
+  {
+   "id": "festival-birds-eye-steamfresh",
+   "storeId": "festival",
+   "department": "Frozen",
+   "name": "Birds Eye Steamfresh",
+   "price": "$1.37"
+  },
+  {
+   "id": "festival-ore-ida",
+   "storeId": "festival",
+   "department": "Frozen",
+   "name": "Ore-Ida",
+   "price": "$4.29"
+  },
+  {
+   "id": "festival-rhodes-rolls",
+   "storeId": "festival",
+   "department": "Frozen",
+   "name": "Rhodes rolls",
+   "price": "$4.99"
+  },
+  {
+   "id": "festival-pet-ritz-crusts",
+   "storeId": "festival",
+   "department": "Frozen",
+   "name": "Pet-Ritz crusts",
+   "price": "$3.99"
+  },
+  {
+   "id": "festival-marie-callender-s-pie",
+   "storeId": "festival",
+   "department": "Frozen",
+   "name": "Marie Callender's pie",
+   "price": "$6.99"
+  },
+  {
+   "id": "festival-bellatoria",
+   "storeId": "festival",
+   "department": "Frozen",
+   "name": "Bellatoria",
+   "price": "$5"
+  },
+  {
+   "id": "festival-eggo",
+   "storeId": "festival",
+   "department": "Frozen",
+   "name": "Eggo",
+   "price": "$3.79"
+  },
+  {
+   "id": "festival-tgi-fridays",
+   "storeId": "festival",
+   "department": "Frozen",
+   "name": "TGI Fridays",
+   "price": "$4.99"
+  },
+  {
+   "id": "festival-stone-ridge-ice-cream",
+   "storeId": "festival",
+   "department": "Frozen",
+   "name": "Stone Ridge ice cream",
+   "price": "$3.99"
+  },
+  {
+   "id": "festival-lay-s",
+   "storeId": "festival",
+   "department": "Snacks and drinks",
+   "name": "Lay's",
+   "price": "BOGO"
+  },
+  {
+   "id": "festival-old-dutch",
+   "storeId": "festival",
+   "department": "Snacks and drinks",
+   "name": "Old Dutch",
+   "price": "BOGO"
+  },
+  {
+   "id": "festival-pringles",
+   "storeId": "festival",
+   "department": "Snacks and drinks",
+   "name": "Pringles",
+   "price": "$2.36"
+  },
+  {
+   "id": "festival-planters",
+   "storeId": "festival",
+   "department": "Snacks and drinks",
+   "name": "Planters",
+   "price": "$2.99"
+  },
+  {
+   "id": "festival-ritz",
+   "storeId": "festival",
+   "department": "Snacks and drinks",
+   "name": "Ritz",
+   "price": "$3.49"
+  },
+  {
+   "id": "festival-town-house-cheez-it-snap-d",
+   "storeId": "festival",
+   "department": "Snacks and drinks",
+   "name": "Town House/Cheez-It Snap'd",
+   "price": "$3.49"
+  },
+  {
+   "id": "festival-chex",
+   "storeId": "festival",
+   "department": "Snacks and drinks",
+   "name": "Chex",
+   "price": "$2.99"
+  },
+  {
+   "id": "festival-pepsi-12-pk",
+   "storeId": "festival",
+   "department": "Snacks and drinks",
+   "name": "Pepsi 12 pk",
+   "price": "$5.99",
+   "conditions": "Festival One Card"
+  },
+  {
+   "id": "festival-pepsi-6-pk-bottles",
+   "storeId": "festival",
+   "department": "Snacks and drinks",
+   "name": "Pepsi 6 pk bottles",
+   "price": "$4.99"
+  },
+  {
+   "id": "festival-simply-oj",
+   "storeId": "festival",
+   "department": "Snacks and drinks",
+   "name": "Simply OJ",
+   "price": "$4.49"
+  },
+  {
+   "id": "festival-folgers",
+   "storeId": "festival",
+   "department": "Snacks and drinks",
+   "name": "Folgers",
+   "price": "$14.99"
+  },
+  {
+   "id": "festival-k-cups",
+   "storeId": "festival",
+   "department": "Snacks and drinks",
+   "name": "K-cups",
+   "price": "$9.99"
+  },
+  {
+   "id": "festival-water-24-pk",
+   "storeId": "festival",
+   "department": "Snacks and drinks",
+   "name": "Water 24 pk",
+   "price": "$3.79"
+  },
+  {
+   "id": "festival-gatorade-8-pk",
+   "storeId": "festival",
+   "department": "Snacks and drinks",
+   "name": "Gatorade 8 pk",
+   "price": "$8.99"
+  },
+  {
+   "id": "festival-fall-bouquet",
+   "storeId": "festival",
+   "department": "Flowers",
+   "name": "Fall bouquet",
+   "price": "$21.99"
+  },
+  {
+   "id": "festival-arrangements",
+   "storeId": "festival",
+   "department": "Flowers",
+   "name": "Arrangements",
+   "price": "from $25.99"
+  },
+  {
+   "id": "aldi-butterball-whole-turkey",
+   "storeId": "aldi",
+   "department": "Meat and seafood",
+   "name": "Butterball whole turkey",
+   "price": "$1.99/lb"
+  },
+  {
+   "id": "aldi-plainville-farms-organic-turkey",
+   "storeId": "aldi",
+   "department": "Meat and seafood",
+   "name": "Plainville Farms organic turkey",
+   "price": "$3.29/lb"
+  },
+  {
+   "id": "aldi-mega-pack-chicken-wings",
+   "storeId": "aldi",
+   "department": "Meat and seafood",
+   "name": "Mega pack chicken wings",
+   "price": "$1.59/lb"
+  },
+  {
+   "id": "aldi-appleton-farms-pork-sausage-roll-16-oz",
+   "storeId": "aldi",
+   "department": "Meat and seafood",
+   "name": "Appleton Farms pork sausage roll 16 oz",
+   "price": "$2.89"
+  },
+  {
+   "id": "aldi-never-any-chicken-sausage",
+   "storeId": "aldi",
+   "department": "Meat and seafood",
+   "name": "Never Any! chicken sausage",
+   "price": "$3.49"
+  },
+  {
+   "id": "aldi-bacon-wrapped-stuffed-jalape-os",
+   "storeId": "aldi",
+   "department": "Meat and seafood",
+   "name": "Bacon-wrapped stuffed jalapeños",
+   "price": "$6.49"
+  },
+  {
+   "id": "aldi-cooked-shrimp-ring-16-oz",
+   "storeId": "aldi",
+   "department": "Meat and seafood",
+   "name": "Cooked shrimp ring 16 oz",
+   "price": "$9.99"
+  },
+  {
+   "id": "aldi-top-crusted-flounder",
+   "storeId": "aldi",
+   "department": "Meat and seafood",
+   "name": "Top-crusted flounder",
+   "price": "$7.99"
+  },
+  {
+   "id": "aldi-veggie-tray-with-ranch-40-oz",
+   "storeId": "aldi",
+   "department": "Prepared and frozen",
+   "name": "Veggie tray with ranch 40 oz",
+   "price": "$8.99"
+  },
+  {
+   "id": "aldi-baked-scalloped-potatoes-20-oz",
+   "storeId": "aldi",
+   "department": "Prepared and frozen",
+   "name": "Baked scalloped potatoes 20 oz",
+   "price": "$5.29"
+  },
+  {
+   "id": "aldi-bremer-chicken-skillet",
+   "storeId": "aldi",
+   "department": "Prepared and frozen",
+   "name": "Bremer chicken skillet",
+   "price": "$4.59"
+  },
+  {
+   "id": "aldi-stouffer-s-lasagna-bake-for-two",
+   "storeId": "aldi",
+   "department": "Prepared and frozen",
+   "name": "Stouffer's lasagna bake for two",
+   "price": "$6.57"
+  },
+  {
+   "id": "aldi-flatbreads",
+   "storeId": "aldi",
+   "department": "Prepared and frozen",
+   "name": "Flatbreads",
+   "price": "$3.99"
+  },
+  {
+   "id": "aldi-mini-tacos",
+   "storeId": "aldi",
+   "department": "Prepared and frozen",
+   "name": "Mini tacos",
+   "price": "$5.99"
+  },
+  {
+   "id": "aldi-pretzel-bites",
+   "storeId": "aldi",
+   "department": "Prepared and frozen",
+   "name": "Pretzel bites",
+   "price": "$2.99"
+  },
+  {
+   "id": "aldi-hash-browns-32-oz",
+   "storeId": "aldi",
+   "department": "Prepared and frozen",
+   "name": "Hash browns 32 oz",
+   "price": "$3.49"
+  },
+  {
+   "id": "aldi-smoothie-mix",
+   "storeId": "aldi",
+   "department": "Prepared and frozen",
+   "name": "Smoothie mix",
+   "price": "$6.99"
+  },
+  {
+   "id": "aldi-friendly-farms-whipped-topping",
+   "storeId": "aldi",
+   "department": "Dairy and bakery",
+   "name": "Friendly Farms whipped topping",
+   "price": "$1.09"
+  },
+  {
+   "id": "aldi-barissimo-peppermint-mocha-creamer",
+   "storeId": "aldi",
+   "department": "Dairy and bakery",
+   "name": "Barissimo peppermint mocha creamer",
+   "price": "$3.99"
+  },
+  {
+   "id": "aldi-mini-muffins",
+   "storeId": "aldi",
+   "department": "Dairy and bakery",
+   "name": "Mini muffins",
+   "price": "$2.75"
+  },
+  {
+   "id": "aldi-italian-holiday-cookies",
+   "storeId": "aldi",
+   "department": "Dairy and bakery",
+   "name": "Italian holiday cookies",
+   "price": "$5.99"
+  },
+  {
+   "id": "aldi-my-mochi",
+   "storeId": "aldi",
+   "department": "Dairy and bakery",
+   "name": "My Mochi",
+   "price": "$4.95"
+  },
+  {
+   "id": "aldi-holiday-character-pops",
+   "storeId": "aldi",
+   "department": "Dairy and bakery",
+   "name": "Holiday character pops",
+   "price": "$2.69"
+  },
+  {
+   "id": "aldi-6-poinsettias",
+   "storeId": "aldi",
+   "department": "Aldi Finds",
+   "name": "6\" poinsettias",
+   "price": "$3.99"
+  },
+  {
+   "id": "aldi-flower-bouquet",
+   "storeId": "aldi",
+   "department": "Aldi Finds",
+   "name": "Flower bouquet",
+   "price": "$5.99"
+  },
+  {
+   "id": "aldi-top-pour-waffle-maker",
+   "storeId": "aldi",
+   "department": "Aldi Finds",
+   "name": "Top-pour waffle maker",
+   "price": "$24.99"
+  },
+  {
+   "id": "aldi-hand-mixer",
+   "storeId": "aldi",
+   "department": "Aldi Finds",
+   "name": "Hand mixer",
+   "price": "$12.99"
+  },
+  {
+   "id": "aldi-parchment-sheets",
+   "storeId": "aldi",
+   "department": "Aldi Finds",
+   "name": "Parchment sheets",
+   "price": "$3.89"
+  },
+  {
+   "id": "traderjoes-brined-fresh-young-turkey",
+   "storeId": "traderjoes",
+   "department": "Turkey and ham",
+   "name": "Brined fresh young turkey",
+   "price": "$2.49/lb"
+  },
+  {
+   "id": "traderjoes-herb-seasoned-bone-in-half-turkey",
+   "storeId": "traderjoes",
+   "department": "Turkey and ham",
+   "name": "Herb-seasoned bone-in half turkey",
+   "price": "$5.49/lb"
+  },
+  {
+   "id": "traderjoes-glatt-kosher-turkey",
+   "storeId": "traderjoes",
+   "department": "Turkey and ham",
+   "name": "Glatt kosher turkey",
+   "price": "$3.49/lb"
+  },
+  {
+   "id": "traderjoes-organic-turkey",
+   "storeId": "traderjoes",
+   "department": "Turkey and ham",
+   "name": "Organic turkey",
+   "price": "$3.99/lb"
+  },
+  {
+   "id": "traderjoes-frick-s-uncured-carver-ham",
+   "storeId": "traderjoes",
+   "department": "Turkey and ham",
+   "name": "Frick's uncured carver ham",
+   "price": "$6.49/lb"
+  },
+  {
+   "id": "traderjoes-hickory-road-carver-ham",
+   "storeId": "traderjoes",
+   "department": "Turkey and ham",
+   "name": "Hickory Road carver ham",
+   "price": "$6.49/lb"
+  },
+  {
+   "id": "traderjoes-fuyu-persimmons",
+   "storeId": "traderjoes",
+   "department": "Produce",
+   "name": "Fuyu persimmons",
+   "price": "$0.99 ea"
+  },
+  {
+   "id": "traderjoes-gold-potatoes-5-lb",
+   "storeId": "traderjoes",
+   "department": "Produce",
+   "name": "Gold potatoes 5 lb",
+   "price": "$4.99"
+  },
+  {
+   "id": "traderjoes-sweet-onion-salad-kit",
+   "storeId": "traderjoes",
+   "department": "Produce",
+   "name": "Sweet onion salad kit",
+   "price": "$3.99"
+  },
+  {
+   "id": "traderjoes-butter-quarters-16-oz",
+   "storeId": "traderjoes",
+   "department": "Dairy",
+   "name": "Butter quarters 16 oz",
+   "price": "$2.99"
+  },
+  {
+   "id": "traderjoes-sweetened-whipped-heavy-cream",
+   "storeId": "traderjoes",
+   "department": "Dairy",
+   "name": "Sweetened whipped heavy cream",
+   "price": "$3.99"
+  },
+  {
+   "id": "traderjoes-toscano-soaked-in-syrah",
+   "storeId": "traderjoes",
+   "department": "Dairy",
+   "name": "Toscano soaked in Syrah",
+   "price": "$11.99/lb"
+  },
+  {
+   "id": "traderjoes-syrah-toscano-spread",
+   "storeId": "traderjoes",
+   "department": "Dairy",
+   "name": "Syrah Toscano spread",
+   "price": "$4.99"
+  },
+  {
+   "id": "traderjoes-sticky-toffee-cheddar",
+   "storeId": "traderjoes",
+   "department": "Dairy",
+   "name": "Sticky toffee cheddar",
+   "price": "$11.99/lb"
+  },
+  {
+   "id": "traderjoes-tres-leches-cheese",
+   "storeId": "traderjoes",
+   "department": "Dairy",
+   "name": "Tres Leches cheese",
+   "price": "$4.99"
+  },
+  {
+   "id": "traderjoes-huntsman",
+   "storeId": "traderjoes",
+   "department": "Dairy",
+   "name": "Huntsman",
+   "price": "$12.99/lb"
+  },
+  {
+   "id": "traderjoes-cornbread-muffins",
+   "storeId": "traderjoes",
+   "department": "Sides",
+   "name": "Cornbread muffins",
+   "price": "$5.49"
+  },
+  {
+   "id": "traderjoes-stuffing-chicken-sausage",
+   "storeId": "traderjoes",
+   "department": "Sides",
+   "name": "Stuffing chicken sausage",
+   "price": "$4.99"
+  },
+  {
+   "id": "traderjoes-holiday-vegetable-hash",
+   "storeId": "traderjoes",
+   "department": "Sides",
+   "name": "Holiday vegetable hash",
+   "price": "$4.99"
+  },
+  {
+   "id": "traderjoes-creamy-corn-pudding",
+   "storeId": "traderjoes",
+   "department": "Sides",
+   "name": "Creamy corn pudding",
+   "price": "$5.99"
+  },
+  {
+   "id": "traderjoes-frozen-creamy-corn",
+   "storeId": "traderjoes",
+   "department": "Sides",
+   "name": "Frozen creamy corn",
+   "price": "$3.99"
+  },
+  {
+   "id": "traderjoes-turkey-gravy-shelf-stable",
+   "storeId": "traderjoes",
+   "department": "Sides",
+   "name": "Turkey gravy, shelf-stable",
+   "price": "$1.69"
+  },
+  {
+   "id": "traderjoes-turkey-gravy-refrigerated",
+   "storeId": "traderjoes",
+   "department": "Sides",
+   "name": "Turkey gravy, refrigerated",
+   "price": "$4.49"
+  },
+  {
+   "id": "traderjoes-cornbread-stuffing-mix",
+   "storeId": "traderjoes",
+   "department": "Sides",
+   "name": "Cornbread stuffing mix",
+   "price": "$4.99"
+  },
+  {
+   "id": "traderjoes-gf-stuffing-mix",
+   "storeId": "traderjoes",
+   "department": "Sides",
+   "name": "GF stuffing mix",
+   "price": "$6.99"
+  },
+  {
+   "id": "traderjoes-cranberry-sauce",
+   "storeId": "traderjoes",
+   "department": "Sides",
+   "name": "Cranberry sauce",
+   "price": "$3.29"
+  },
+  {
+   "id": "traderjoes-mirepoix",
+   "storeId": "traderjoes",
+   "department": "Sides",
+   "name": "Mirepoix",
+   "price": "$3.49"
+  },
+  {
+   "id": "traderjoes-fried-onion-pieces",
+   "storeId": "traderjoes",
+   "department": "Sides",
+   "name": "Fried onion pieces",
+   "price": "$3.79"
+  },
+  {
+   "id": "traderjoes-cream-of-portabella-soup",
+   "storeId": "traderjoes",
+   "department": "Sides",
+   "name": "Cream of portabella soup",
+   "price": "$2.49"
+  },
+  {
+   "id": "traderjoes-everything-but-the-leftovers-seasoning",
+   "storeId": "traderjoes",
+   "department": "Sides",
+   "name": "Everything but the Leftovers seasoning",
+   "price": "$2.99"
+  },
+  {
+   "id": "traderjoes-puff-pastry",
+   "storeId": "traderjoes",
+   "department": "Sides",
+   "name": "Puff pastry",
+   "price": "$5.99"
+  },
+  {
+   "id": "traderjoes-turkey-stuffing-en-cro-te",
+   "storeId": "traderjoes",
+   "department": "Entree",
+   "name": "Turkey & stuffing en croûte",
+   "price": "$16.99"
+  },
+  {
+   "id": "traderjoes-maple-streusel-bread",
+   "storeId": "traderjoes",
+   "department": "Bakery and desserts",
+   "name": "Maple streusel bread",
+   "price": "$4.49"
+  },
+  {
+   "id": "traderjoes-pumpkin-pie",
+   "storeId": "traderjoes",
+   "department": "Bakery and desserts",
+   "name": "Pumpkin pie",
+   "price": "$6.99"
+  },
+  {
+   "id": "traderjoes-apple-crumble-pie",
+   "storeId": "traderjoes",
+   "department": "Bakery and desserts",
+   "name": "Apple crumble pie",
+   "price": "$7.99"
+  },
+  {
+   "id": "traderjoes-pecan-pie",
+   "storeId": "traderjoes",
+   "department": "Bakery and desserts",
+   "name": "Pecan pie",
+   "price": "$9.99"
+  },
+  {
+   "id": "traderjoes-cocoa-truffles-with-maple-sugar",
+   "storeId": "traderjoes",
+   "department": "Bakery and desserts",
+   "name": "Cocoa truffles with maple sugar",
+   "price": "$4.49"
+  },
+  {
+   "id": "traderjoes-mini-marshmallows",
+   "storeId": "traderjoes",
+   "department": "Bakery and desserts",
+   "name": "Mini marshmallows",
+   "price": "$2.99"
+  },
+  {
+   "id": "traderjoes-maple-leaf-ice-cream-sandwiches",
+   "storeId": "traderjoes",
+   "department": "Bakery and desserts",
+   "name": "Maple leaf ice cream sandwiches",
+   "price": "$3.99"
+  },
+  {
+   "id": "traderjoes-nuts-about-rosemary",
+   "storeId": "traderjoes",
+   "department": "Snacks",
+   "name": "Nuts About Rosemary",
+   "price": "$8.99"
+  },
+  {
+   "id": "traderjoes-maple-spiced-nut-mix",
+   "storeId": "traderjoes",
+   "department": "Snacks",
+   "name": "Maple spiced nut mix",
+   "price": "$6.99"
+  },
+  {
+   "id": "traderjoes-dried-cranberries",
+   "storeId": "traderjoes",
+   "department": "Snacks",
+   "name": "Dried cranberries",
+   "price": "$1.99"
+  },
+  {
+   "id": "traderjoes-stuffing-popcorn",
+   "storeId": "traderjoes",
+   "department": "Snacks",
+   "name": "Stuffing popcorn",
+   "price": "$2.99"
+  },
+  {
+   "id": "traderjoes-stuffing-kettle-chips",
+   "storeId": "traderjoes",
+   "department": "Snacks",
+   "name": "Stuffing kettle chips",
+   "price": "$2.99"
+  },
+  {
+   "id": "traderjoes-sparkling-cranberry-ginger-brew",
+   "storeId": "traderjoes",
+   "department": "Beverages",
+   "name": "Sparkling cranberry ginger brew",
+   "price": "$4.99"
+  },
+  {
+   "id": "traderjoes-maple-pecan-cold-brew",
+   "storeId": "traderjoes",
+   "department": "Beverages",
+   "name": "Maple pecan cold brew",
+   "price": "$9.99"
+  },
+  {
+   "id": "traderjoes-sparkling-apple-elderflower",
+   "storeId": "traderjoes",
+   "department": "Beverages",
+   "name": "Sparkling apple elderflower",
+   "price": "$3.99"
+  },
+  {
+   "id": "traderjoes-chocolate-advent-calendar",
+   "storeId": "traderjoes",
+   "department": "Advent calendars",
+   "name": "Chocolate advent calendar",
+   "price": "$1.49"
+  },
+  {
+   "id": "traderjoes-cat-or-dog-advent-calendar",
+   "storeId": "traderjoes",
+   "department": "Advent calendars",
+   "name": "Cat or dog advent calendar",
+   "price": "$7.99"
+  },
+  {
+   "id": "traderjoes-compass-bridge-pinot-noir",
+   "storeId": "traderjoes",
+   "department": "Wine and spirits (vary by location)",
+   "name": "Compass Bridge Pinot Noir",
+   "price": "$8.99"
+  },
+  {
+   "id": "traderjoes-emma-reichart-riesling-or-pinot-noir-ros",
+   "storeId": "traderjoes",
+   "department": "Wine and spirits (vary by location)",
+   "name": "Emma Reichart Riesling or Pinot Noir Rosé",
+   "price": "$5.99"
+  },
+  {
+   "id": "traderjoes-platinum-reserve-blanc-de-blancs-or-brut-ros",
+   "storeId": "traderjoes",
+   "department": "Wine and spirits (vary by location)",
+   "name": "Platinum Reserve Blanc de Blancs or Brut Rosé",
+   "price": "$14.99"
+  },
+  {
+   "id": "traderjoes-belgian-vintage-ale",
+   "storeId": "traderjoes",
+   "department": "Wine and spirits (vary by location)",
+   "name": "Belgian Vintage Ale",
+   "price": "$7.99"
+  },
+  {
+   "id": "traderjoes-maple-bourbon",
+   "storeId": "traderjoes",
+   "department": "Wine and spirits (vary by location)",
+   "name": "Maple bourbon",
+   "price": "$12.99"
+  },
+  {
+   "id": "traderjoes-seasonal-bouquets",
+   "storeId": "traderjoes",
+   "department": "Other",
+   "name": "Seasonal bouquets",
+   "price": "$4.99–$19.99"
+  },
+  {
+   "id": "traderjoes-lemon-yuzu-dish-spray",
+   "storeId": "traderjoes",
+   "department": "Other",
+   "name": "Lemon yuzu dish spray",
+   "price": "$4.99"
+  },
+  {
+   "id": "sendiks-sendik-s-fresh-hen-or-tom-turkeys",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Sendik's fresh hen or tom turkeys",
+   "price": "$2.99/lb",
+   "conditions": "save $1/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-fresh-never-frozen-whole-turkey-breast",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Sendik's fresh never-frozen whole turkey breast",
+   "price": "$3.99/lb",
+   "conditions": "save $2/lb"
+  },
+  {
+   "id": "sendiks-hormel-cure-81-spiral-sliced-half-hams",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Hormel Cure 81 spiral sliced half hams",
+   "price": "$3.49/lb",
+   "conditions": "save $1.50/lb"
+  },
+  {
+   "id": "sendiks-hormel-cure-81-boneless-sliced-ham",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Hormel Cure 81 boneless sliced ham",
+   "price": "$5.99/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-spiral-sliced-whole-or-half-boneless-ha",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Sendik's spiral sliced whole or half boneless ham",
+   "price": "$5.99/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-natural-fresh-ground-round-value-pack",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Sendik's Natural fresh ground round, value pack",
+   "price": "$5.99/lb",
+   "conditions": "save $5.50/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-natural-usda-choice-black-angus-boneles",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Sendik's Natural USDA Choice Black Angus boneless chuck roast",
+   "price": "$7.99/lb",
+   "conditions": "save $5/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-natural-usda-choice-black-angus-t-bone",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Sendik's Natural USDA Choice Black Angus T-bone",
+   "price": "$14.99/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-natural-usda-choice-black-angus-porterh",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Sendik's Natural USDA Choice Black Angus porterhouse",
+   "price": "$15.99/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-natural-usda-black-angus-prime-ny-strip",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Sendik's Natural USDA Black Angus Prime NY strip",
+   "price": "$21.99/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-natural-boneless-pork-chops-or-roasts-v",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Sendik's Natural boneless pork chops or roasts, value pack",
+   "price": "$2.99/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-natural-boneless-pork-ribeye",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Sendik's Natural boneless pork ribeye",
+   "price": "$3.99/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-boneless-stuffed-pork-chops-and-roasts",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Sendik's boneless stuffed pork chops and roasts",
+   "price": "$3.99/lb"
+  },
+  {
+   "id": "sendiks-bacon-wrapped-pork-rib-eye-chop",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Bacon-wrapped pork rib eye chop",
+   "price": "$4.99/lb"
+  },
+  {
+   "id": "sendiks-berkshire-pork-tenderloin",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Berkshire pork tenderloin",
+   "price": "$7.99/lb"
+  },
+  {
+   "id": "sendiks-berkshire-pork-porterhouse-chop",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Berkshire pork porterhouse chop",
+   "price": "$8.99/lb"
+  },
+  {
+   "id": "sendiks-berkshire-pork-back-ribs",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Berkshire pork back ribs",
+   "price": "$5.99/lb"
+  },
+  {
+   "id": "sendiks-berkshire-pork-belly",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Berkshire pork belly",
+   "price": "$6.99/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-grade-a-split-chicken-wings",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Sendik's Grade A split chicken wings",
+   "price": "$3.99/lb"
+  },
+  {
+   "id": "sendiks-badger-sliced-ham-quarters-original-or-honey",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Badger sliced ham quarters (original or honey)",
+   "price": "$5.99/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-uncured-natural-bacon-12-oz",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Sendik's uncured natural bacon 12 oz",
+   "price": "$5.99"
+  },
+  {
+   "id": "sendiks-daily-s-premium-bacon-16-oz",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Daily's premium bacon 16 oz",
+   "price": "$3.99",
+   "conditions": "save $4"
+  },
+  {
+   "id": "sendiks-nueske-s-summer-sausage-10-oz",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Nueske's summer sausage 10 oz",
+   "price": "$5.99"
+  },
+  {
+   "id": "sendiks-sendik-s-uncured-summer-sausage-8-oz",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Sendik's uncured summer sausage 8 oz",
+   "price": "$4.99"
+  },
+  {
+   "id": "sendiks-usinger-s-frozen-sausages-16-oz",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Usinger's frozen sausages 16 oz",
+   "price": "$5.99"
+  },
+  {
+   "id": "sendiks-perdue-breaded-poultry-bags-27-29-oz",
+   "storeId": "sendiks",
+   "department": "Meat",
+   "name": "Perdue breaded poultry bags 27–29 oz",
+   "price": "$7.49"
+  },
+  {
+   "id": "sendiks-royal-white-extra-jumbo-raw-ez-peel-shrimp-2-lb-",
+   "storeId": "sendiks",
+   "department": "Seafood",
+   "name": "Royal White extra jumbo raw EZ-peel shrimp, 2 lb bag, 16/20 ct",
+   "price": "$13.99",
+   "conditions": "save $9"
+  },
+  {
+   "id": "sendiks-jumbo-cooked-or-raw-cleaned-shrimp-21-25-ct-2-lb",
+   "storeId": "sendiks",
+   "department": "Seafood",
+   "name": "Jumbo cooked or raw cleaned shrimp 21/25 ct, 2 lb bag",
+   "price": "$19.99"
+  },
+  {
+   "id": "sendiks-tiger-gold-colossal-freshwater-ez-peel-shrimp-8-",
+   "storeId": "sendiks",
+   "department": "Seafood",
+   "name": "Tiger Gold colossal freshwater EZ-peel shrimp 8/12 ct, 2 lb",
+   "price": "$22.99"
+  },
+  {
+   "id": "sendiks-censea-cooked-salad-shrimp-2-lb",
+   "storeId": "sendiks",
+   "department": "Seafood",
+   "name": "CenSea cooked salad shrimp 2 lb",
+   "price": "$12.99"
+  },
+  {
+   "id": "sendiks-sendik-s-shrimp-skewers-3-oz-each",
+   "storeId": "sendiks",
+   "department": "Seafood",
+   "name": "Sendik's shrimp skewers, 3 oz each",
+   "price": "4/$10"
+  },
+  {
+   "id": "sendiks-wild-bairdi-crab-legs",
+   "storeId": "sendiks",
+   "department": "Seafood",
+   "name": "Wild Bairdi crab legs",
+   "price": "$17.99/lb",
+   "conditions": "save $2"
+  },
+  {
+   "id": "sendiks-extra-jumbo-southern-red-king-crab-legs",
+   "storeId": "sendiks",
+   "department": "Seafood",
+   "name": "Extra jumbo Southern red king crab legs",
+   "price": "$49.99/lb"
+  },
+  {
+   "id": "sendiks-wild-american-coldwater-lobster-tails-3-4-oz",
+   "storeId": "sendiks",
+   "department": "Seafood",
+   "name": "Wild American coldwater lobster tails 3–4 oz",
+   "price": "$24.99/lb"
+  },
+  {
+   "id": "sendiks-premium-battered-cod-loins",
+   "storeId": "sendiks",
+   "department": "Seafood",
+   "name": "Premium battered cod loins",
+   "price": "$5.99/lb"
+  },
+  {
+   "id": "sendiks-frozen-cod-tails",
+   "storeId": "sendiks",
+   "department": "Seafood",
+   "name": "Frozen cod tails",
+   "price": "$6.99/lb"
+  },
+  {
+   "id": "sendiks-wild-flounder-fillets",
+   "storeId": "sendiks",
+   "department": "Seafood",
+   "name": "Wild flounder fillets",
+   "price": "$9.99/lb"
+  },
+  {
+   "id": "sendiks-stuffed-salmon-with-seafood-and-maple-bacon-8-oz",
+   "storeId": "sendiks",
+   "department": "Seafood",
+   "name": "Stuffed salmon with seafood and maple bacon, 8 oz",
+   "price": "2/$11.98"
+  },
+  {
+   "id": "sendiks-bos-n-select-breaded-oysters",
+   "storeId": "sendiks",
+   "department": "Seafood",
+   "name": "Bos'n Select breaded oysters",
+   "price": "$9.99/lb"
+  },
+  {
+   "id": "sendiks-sea-tru-spanish-paella-10-oz",
+   "storeId": "sendiks",
+   "department": "Seafood",
+   "name": "Sea Tru Spanish paella 10 oz",
+   "price": "$3.99"
+  },
+  {
+   "id": "sendiks-sendik-s-herring-in-cream-or-wine-sauce-12-oz",
+   "storeId": "sendiks",
+   "department": "Seafood",
+   "name": "Sendik's herring in cream or wine sauce 12 oz",
+   "price": "$5.49"
+  },
+  {
+   "id": "sendiks-sendik-s-roast-chicken-breast",
+   "storeId": "sendiks",
+   "department": "Deli and prepared foods",
+   "name": "Sendik's roast chicken breast",
+   "price": "$8.99/lb"
+  },
+  {
+   "id": "sendiks-boar-s-head-tavern-ham",
+   "storeId": "sendiks",
+   "department": "Deli and prepared foods",
+   "name": "Boar's Head Tavern Ham",
+   "price": "$9.99/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-quiche-3-cheese-ham-cheddar-broccoli-ch",
+   "storeId": "sendiks",
+   "department": "Deli and prepared foods",
+   "name": "Sendik's quiche (3 cheese, ham & cheddar, broccoli cheddar, Lorraine)",
+   "price": "$7.99/lb",
+   "conditions": "save $1/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-classic-lasagna",
+   "storeId": "sendiks",
+   "department": "Deli and prepared foods",
+   "name": "Sendik's classic lasagna",
+   "price": "$6.99/lb",
+   "conditions": "save $3/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-homemade-turkey-gravy",
+   "storeId": "sendiks",
+   "department": "Deli and prepared foods",
+   "name": "Sendik's homemade turkey gravy",
+   "price": "$4.99/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-gourmet-dill-potato-salad",
+   "storeId": "sendiks",
+   "department": "Deli and prepared foods",
+   "name": "Sendik's gourmet dill potato salad",
+   "price": "$3.99/lb",
+   "conditions": "save $3/lb"
+  },
+  {
+   "id": "sendiks-garlic-roasted-brussels-sprouts",
+   "storeId": "sendiks",
+   "department": "Deli and prepared foods",
+   "name": "Garlic roasted Brussels sprouts",
+   "price": "$6.99/lb"
+  },
+  {
+   "id": "sendiks-taco-dip-trays",
+   "storeId": "sendiks",
+   "department": "Deli and prepared foods",
+   "name": "Taco dip trays",
+   "price": "$7.99/lb"
+  },
+  {
+   "id": "sendiks-vegetable-and-dip-trays",
+   "storeId": "sendiks",
+   "department": "Deli and prepared foods",
+   "name": "Vegetable and dip trays",
+   "price": "$5.99/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-homemade-cranberry-orange-relish",
+   "storeId": "sendiks",
+   "department": "Deli and prepared foods",
+   "name": "Sendik's homemade cranberry orange relish",
+   "price": "$6.99/lb"
+  },
+  {
+   "id": "sendiks-sendik-s-pita-chips-10-oz",
+   "storeId": "sendiks",
+   "department": "Deli and prepared foods",
+   "name": "Sendik's pita chips 10 oz",
+   "price": "$4.99"
+  },
+  {
+   "id": "sendiks-november-grazing-box",
+   "storeId": "sendiks",
+   "department": "Deli and prepared foods",
+   "name": "November grazing box",
+   "price": "$30 each"
+  },
+  {
+   "id": "sendiks-widmer-s-mild-brick",
+   "storeId": "sendiks",
+   "department": "Cheese",
+   "name": "Widmer's mild brick",
+   "price": "$8.99/lb",
+   "conditions": "cheese of the month, save $2/lb"
+  },
+  {
+   "id": "sendiks-wi-mozzarella",
+   "storeId": "sendiks",
+   "department": "Cheese",
+   "name": "WI mozzarella",
+   "price": "$4.99/lb"
+  },
+  {
+   "id": "sendiks-sartori-tuscan-or-parmesan-bag-7-oz",
+   "storeId": "sendiks",
+   "department": "Cheese",
+   "name": "Sartori Tuscan or Parmesan bag 7 oz",
+   "price": "$4.99"
+  },
+  {
+   "id": "sendiks-sartori-italian-cheddars-5-7-oz",
+   "storeId": "sendiks",
+   "department": "Cheese",
+   "name": "Sartori Italian cheddars 5–7 oz",
+   "price": "$4.99"
+  },
+  {
+   "id": "sendiks-sartori-reserve-line-5-3-oz",
+   "storeId": "sendiks",
+   "department": "Cheese",
+   "name": "Sartori Reserve line 5.3 oz",
+   "price": "$4.99"
+  },
+  {
+   "id": "sendiks-sendik-s-cheese-spreads-15-oz",
+   "storeId": "sendiks",
+   "department": "Cheese",
+   "name": "Sendik's cheese spreads 15 oz",
+   "price": "$4.49"
+  },
+  {
+   "id": "sendiks-firehook-crackers-5-5-oz",
+   "storeId": "sendiks",
+   "department": "Cheese",
+   "name": "Firehook crackers 5.5 oz",
+   "price": "$5.99"
+  },
+  {
+   "id": "sendiks-cheese-curds-curd-and-long-event-nov-21-22-10-am",
+   "storeId": "sendiks",
+   "department": "Cheese",
+   "name": "Cheese curds (\"Curd and Long\" event, Nov 21–22, 10 AM–4 PM)",
+   "price": "$7.99/lb"
+  },
+  {
+   "id": "sendiks-wi-russet-potatoes",
+   "storeId": "sendiks",
+   "department": "Produce",
+   "name": "WI russet potatoes",
+   "price": "$0.69/lb"
+  },
+  {
+   "id": "sendiks-california-sweet-potatoes",
+   "storeId": "sendiks",
+   "department": "Produce",
+   "name": "California sweet potatoes",
+   "price": "$1.29/lb"
+  },
+  {
+   "id": "sendiks-brussels-sprouts",
+   "storeId": "sendiks",
+   "department": "Produce",
+   "name": "Brussels sprouts",
+   "price": "$1.99/lb",
+   "conditions": "save $1.50/lb"
+  },
+  {
+   "id": "sendiks-broccoli",
+   "storeId": "sendiks",
+   "department": "Produce",
+   "name": "Broccoli",
+   "price": "$1.99/lb"
+  },
+  {
+   "id": "sendiks-bell-peppers-red-orange-yellow",
+   "storeId": "sendiks",
+   "department": "Produce",
+   "name": "Bell peppers (red, orange, yellow)",
+   "price": "4/$5"
+  },
+  {
+   "id": "sendiks-michigan-honeycrisp-apple-totes",
+   "storeId": "sendiks",
+   "department": "Produce",
+   "name": "Michigan Honeycrisp apple totes",
+   "price": "$1.49/lb",
+   "conditions": "save $1.50/lb"
+  },
+  {
+   "id": "sendiks-pero-farms-snipped-green-beans-12-oz",
+   "storeId": "sendiks",
+   "department": "Produce",
+   "name": "Pero Farms snipped green beans 12 oz",
+   "price": "2/$6"
+  },
+  {
+   "id": "sendiks-wetherby-cranberries-12-oz",
+   "storeId": "sendiks",
+   "department": "Produce",
+   "name": "Wetherby cranberries 12 oz",
+   "price": "2/$4"
+  },
+  {
+   "id": "sendiks-peeters-baby-bella-mushrooms-8-oz",
+   "storeId": "sendiks",
+   "department": "Produce",
+   "name": "Peeters baby bella mushrooms 8 oz",
+   "price": "2/$5"
+  },
+  {
+   "id": "sendiks-wild-wonder-medley-tomatoes-12-oz",
+   "storeId": "sendiks",
+   "department": "Produce",
+   "name": "Wild Wonder medley tomatoes 12 oz",
+   "price": "2/$6"
+  },
+  {
+   "id": "sendiks-organicgirl-salads-9-10-oz",
+   "storeId": "sendiks",
+   "department": "Produce",
+   "name": "Organicgirl salads 9–10 oz",
+   "price": "$6.99"
+  },
+  {
+   "id": "sendiks-dole-chopped-salads",
+   "storeId": "sendiks",
+   "department": "Produce",
+   "name": "Dole chopped salads",
+   "price": "2/$8"
+  },
+  {
+   "id": "sendiks-sendik-s-dinner-rolls-12-ct",
+   "storeId": "sendiks",
+   "department": "Bakery",
+   "name": "Sendik's dinner rolls, 12 ct",
+   "price": "$2.99"
+  },
+  {
+   "id": "sendiks-sendik-s-brioche-slider-buns-8-ct",
+   "storeId": "sendiks",
+   "department": "Bakery",
+   "name": "Sendik's brioche slider buns, 8 ct",
+   "price": "$5.99"
+  },
+  {
+   "id": "sendiks-sendik-s-sourdough-boule-17-oz",
+   "storeId": "sendiks",
+   "department": "Bakery",
+   "name": "Sendik's sourdough boule 17 oz",
+   "price": "$3.99"
+  },
+  {
+   "id": "sendiks-sendik-s-cranberry-rosemary-artisan-bread-14-oz",
+   "storeId": "sendiks",
+   "department": "Bakery",
+   "name": "Sendik's cranberry rosemary artisan bread 14 oz",
+   "price": "$5.99"
+  },
+  {
+   "id": "sendiks-sendik-s-gourmet-large-pumpkin-pie-32-oz",
+   "storeId": "sendiks",
+   "department": "Bakery",
+   "name": "Sendik's gourmet large pumpkin pie 32 oz",
+   "price": "$9.99",
+   "conditions": "save $1"
+  },
+  {
+   "id": "sendiks-sendik-s-coffee-cakes-13-18-oz",
+   "storeId": "sendiks",
+   "department": "Bakery",
+   "name": "Sendik's coffee cakes 13–18 oz",
+   "price": "$4.99"
+  },
+  {
+   "id": "sendiks-sendik-s-all-butter-cookies-10-ct",
+   "storeId": "sendiks",
+   "department": "Bakery",
+   "name": "Sendik's all butter cookies, 10 ct",
+   "price": "$6.49"
+  },
+  {
+   "id": "sendiks-sendik-s-specialty-cake-half",
+   "storeId": "sendiks",
+   "department": "Bakery",
+   "name": "Sendik's specialty cake, half",
+   "price": "$11.99"
+  },
+  {
+   "id": "sendiks-sendik-s-specialty-cake-whole",
+   "storeId": "sendiks",
+   "department": "Bakery",
+   "name": "Sendik's specialty cake, whole",
+   "price": "$22.99"
+  },
+  {
+   "id": "sendiks-sendik-s-8x8-brownie",
+   "storeId": "sendiks",
+   "department": "Bakery",
+   "name": "Sendik's 8x8 brownie",
+   "price": "$5.49"
+  },
+  {
+   "id": "sendiks-sendik-s-4x4-brownie",
+   "storeId": "sendiks",
+   "department": "Bakery",
+   "name": "Sendik's 4x4 brownie",
+   "price": "$2.49"
+  },
+  {
+   "id": "sendiks-antonina-s-gluten-free-brownie-8-oz",
+   "storeId": "sendiks",
+   "department": "Bakery",
+   "name": "Antonina's gluten-free brownie 8 oz",
+   "price": "$4.99"
+  },
+  {
+   "id": "sendiks-antonina-s-gluten-free-cupcakes-10-5-oz",
+   "storeId": "sendiks",
+   "department": "Bakery",
+   "name": "Antonina's gluten-free cupcakes 10.5 oz",
+   "price": "$5.99"
+  },
+  {
+   "id": "sendiks-der-dutchman-fry-pies",
+   "storeId": "sendiks",
+   "department": "Bakery",
+   "name": "Der Dutchman fry pies",
+   "price": "$2.99 ea"
+  },
+  {
+   "id": "sendiks-izzio-french-baguette-13-oz",
+   "storeId": "sendiks",
+   "department": "Bakery",
+   "name": "Izzio French baguette 13 oz",
+   "price": "$3.99"
+  },
+  {
+   "id": "sendiks-sweet-p-donut-holes-14-oz",
+   "storeId": "sendiks",
+   "department": "Bakery",
+   "name": "Sweet P donut holes 14 oz",
+   "price": "$4.99"
+  },
+  {
+   "id": "sendiks-pretzilla-bite-tubs",
+   "storeId": "sendiks",
+   "department": "Bakery",
+   "name": "Pretzilla bite tubs",
+   "price": "2/$10"
+  },
+  {
+   "id": "sendiks-gold-medal-flour-5-lb",
+   "storeId": "sendiks",
+   "department": "Baking",
+   "name": "Gold Medal flour 5 lb",
+   "price": "$3.99"
+  },
+  {
+   "id": "sendiks-c-h-cane-sugar-4-lb",
+   "storeId": "sendiks",
+   "department": "Baking",
+   "name": "C&H cane sugar 4 lb",
+   "price": "$3.99"
+  },
+  {
+   "id": "sendiks-land-o-lakes-butter-quarters-1-lb",
+   "storeId": "sendiks",
+   "department": "Baking",
+   "name": "Land O Lakes butter quarters 1 lb",
+   "price": "$3.99",
+   "conditions": "not European"
+  },
+  {
+   "id": "sendiks-nestl-morsels-9-12-oz",
+   "storeId": "sendiks",
+   "department": "Baking",
+   "name": "Nestlé morsels 9–12 oz",
+   "price": "$3.99"
+  },
+  {
+   "id": "sendiks-pillsbury-pie-crust-14-1-oz",
+   "storeId": "sendiks",
+   "department": "Baking",
+   "name": "Pillsbury pie crust 14.1 oz",
+   "price": "$3.99"
+  },
+  {
+   "id": "sendiks-eagle-brand-14-oz",
+   "storeId": "sendiks",
+   "department": "Baking",
+   "name": "Eagle Brand 14 oz",
+   "price": "2/$5"
+  },
+  {
+   "id": "sendiks-libby-s-pumpkin-15-oz",
+   "storeId": "sendiks",
+   "department": "Baking",
+   "name": "Libby's pumpkin 15 oz",
+   "price": "2/$4"
+  },
+  {
+   "id": "sendiks-pillsbury-crescents-or-cinnamon-rolls",
+   "storeId": "sendiks",
+   "department": "Baking",
+   "name": "Pillsbury crescents or cinnamon rolls",
+   "price": "2/$5"
+  },
+  {
+   "id": "sendiks-reddi-wip-6-5-oz",
+   "storeId": "sendiks",
+   "department": "Baking",
+   "name": "Reddi-wip 6.5 oz",
+   "price": "$2.99"
+  },
+  {
+   "id": "sendiks-baker-s-coconut-14-oz",
+   "storeId": "sendiks",
+   "department": "Baking",
+   "name": "Baker's coconut 14 oz",
+   "price": "$3.29"
+  },
+  {
+   "id": "sendiks-baker-s-chocolate-bars-4-oz",
+   "storeId": "sendiks",
+   "department": "Baking",
+   "name": "Baker's chocolate bars 4 oz",
+   "price": "$3.49"
+  },
+  {
+   "id": "sendiks-jiffy-corn-muffin-mix",
+   "storeId": "sendiks",
+   "department": "Baking",
+   "name": "Jiffy corn muffin mix",
+   "price": "2/$1.50"
+  },
+  {
+   "id": "sendiks-betty-crocker-cake-mix",
+   "storeId": "sendiks",
+   "department": "Baking",
+   "name": "Betty Crocker cake mix",
+   "price": "2/$3"
+  },
+  {
+   "id": "sendiks-betty-crocker-frosting",
+   "storeId": "sendiks",
+   "department": "Baking",
+   "name": "Betty Crocker frosting",
+   "price": "2/$3"
+  },
+  {
+   "id": "sendiks-keebler-graham-crusts",
+   "storeId": "sendiks",
+   "department": "Baking",
+   "name": "Keebler graham crusts",
+   "price": "$2.99"
+  },
+  {
+   "id": "sendiks-food-club-grade-a-large-eggs",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Food Club Grade A large eggs",
+   "price": "$0.99/dozen",
+   "conditions": "limit 4"
+  },
+  {
+   "id": "sendiks-daisy-sour-cream-16-oz",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Daisy sour cream 16 oz",
+   "price": "$2.29"
+  },
+  {
+   "id": "sendiks-philadelphia-cream-cheese-8-oz",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Philadelphia cream cheese 8 oz",
+   "price": "$2.99"
+  },
+  {
+   "id": "sendiks-sargento-shredded-5-8-oz",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Sargento shredded 5–8 oz",
+   "price": "2/$6"
+  },
+  {
+   "id": "sendiks-coffee-mate-32-oz",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Coffee-mate 32 oz",
+   "price": "$3.99"
+  },
+  {
+   "id": "sendiks-silk-48-64-oz",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Silk 48–64 oz",
+   "price": "2/$8"
+  },
+  {
+   "id": "sendiks-simply-juice-46-52-oz",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Simply juice 46–52 oz",
+   "price": "$3.99"
+  },
+  {
+   "id": "sendiks-prairie-farms-chocolate-milk-gal",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Prairie Farms chocolate milk ½ gal",
+   "price": "$2.99"
+  },
+  {
+   "id": "sendiks-dean-s-dips-16-oz",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Dean's dips 16 oz",
+   "price": "2/$4"
+  },
+  {
+   "id": "sendiks-noosa-yogurt-8-oz",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Noosa yogurt 8 oz",
+   "price": "2/$4"
+  },
+  {
+   "id": "sendiks-sendik-s-grated-parmesan-8-oz",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Sendik's grated Parmesan 8 oz",
+   "price": "$3.99"
+  },
+  {
+   "id": "sendiks-velveeta-32-oz",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Velveeta 32 oz",
+   "price": "$7.49"
+  },
+  {
+   "id": "sendiks-cool-whip-8-oz",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Cool Whip 8 oz",
+   "price": "2/$4"
+  },
+  {
+   "id": "sendiks-cedar-crest-ice-cream-48-oz",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Cedar Crest ice cream 48 oz",
+   "price": "$4.49"
+  },
+  {
+   "id": "sendiks-birds-eye-steamfresh",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Birds Eye Steamfresh",
+   "price": "2/$3"
+  },
+  {
+   "id": "sendiks-rhodes-rolls",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Rhodes rolls",
+   "price": "$4.49"
+  },
+  {
+   "id": "sendiks-ore-ida-tater-tots",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Ore-Ida tater tots",
+   "price": "$4.99"
+  },
+  {
+   "id": "sendiks-eggo",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Eggo",
+   "price": "2/$6"
+  },
+  {
+   "id": "sendiks-bellatoria-pizza",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Bellatoria pizza",
+   "price": "2/$9"
+  },
+  {
+   "id": "sendiks-screamin-sicilian",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Screamin' Sicilian",
+   "price": "$5.99"
+  },
+  {
+   "id": "sendiks-rana-pasta-20-oz",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Rana pasta 20 oz",
+   "price": "$5.99"
+  },
+  {
+   "id": "sendiks-pillsbury-pie-shells",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Pillsbury pie shells",
+   "price": "2/$6"
+  },
+  {
+   "id": "sendiks-pillsbury-grands-16-3-oz",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Pillsbury Grands 16.3 oz",
+   "price": "2/$6"
+  },
+  {
+   "id": "sendiks-bay-s-english-muffins",
+   "storeId": "sendiks",
+   "department": "Dairy and frozen",
+   "name": "Bay's English muffins",
+   "price": "$3.49"
+  },
+  {
+   "id": "sendiks-food-club-canned-vegetables",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Food Club canned vegetables",
+   "price": "2/$1",
+   "conditions": "limit 4"
+  },
+  {
+   "id": "sendiks-green-giant-vegetables",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Green Giant vegetables",
+   "price": "$0.99"
+  },
+  {
+   "id": "sendiks-red-gold-tomatoes",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Red Gold tomatoes",
+   "price": "5/$5"
+  },
+  {
+   "id": "sendiks-swanson-broth-stock-32-oz",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Swanson broth/stock 32 oz",
+   "price": "2/$4",
+   "conditions": "not organic"
+  },
+  {
+   "id": "sendiks-campbell-s-cream-soups",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Campbell's cream soups",
+   "price": "2/$3"
+  },
+  {
+   "id": "sendiks-heinz-gravy",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Heinz gravy",
+   "price": "2/$5"
+  },
+  {
+   "id": "sendiks-campbell-s-gravy",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Campbell's gravy",
+   "price": "2/$3"
+  },
+  {
+   "id": "sendiks-mccormick-turkey-gravy",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "McCormick turkey gravy",
+   "price": "$1.79"
+  },
+  {
+   "id": "sendiks-mccormick-brown-gravy",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "McCormick brown gravy",
+   "price": "$0.99"
+  },
+  {
+   "id": "sendiks-hellmann-s-30-oz",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Hellmann's 30 oz",
+   "price": "$4.99",
+   "conditions": "With $2 digital coupon; $6.99 without"
+  },
+  {
+   "id": "sendiks-stove-top",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Stove Top",
+   "price": "$2.99"
+  },
+  {
+   "id": "sendiks-ocean-spray-cranberry-sauce",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Ocean Spray cranberry sauce",
+   "price": "2/$4"
+  },
+  {
+   "id": "sendiks-french-s-fried-onions-6-oz",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "French's fried onions 6 oz",
+   "price": "$3.99"
+  },
+  {
+   "id": "sendiks-idahoan",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Idahoan",
+   "price": "2/$3"
+  },
+  {
+   "id": "sendiks-barilla",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Barilla",
+   "price": "2/$3"
+  },
+  {
+   "id": "sendiks-kraft-mac-cheese",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Kraft mac & cheese",
+   "price": "2/$3"
+  },
+  {
+   "id": "sendiks-ben-s-ready-rice",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Ben's Ready Rice",
+   "price": "2/$4"
+  },
+  {
+   "id": "sendiks-pompeian-olive-oil-16-oz",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Pompeian olive oil 16 oz",
+   "price": "$7.99"
+  },
+  {
+   "id": "sendiks-hidden-valley-ranch",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Hidden Valley Ranch",
+   "price": "$4.99"
+  },
+  {
+   "id": "sendiks-miracle-whip-30-oz",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Miracle Whip 30 oz",
+   "price": "$5.99"
+  },
+  {
+   "id": "sendiks-zoup-soup-16-oz",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Zoup soup 16 oz",
+   "price": "2/$6"
+  },
+  {
+   "id": "sendiks-zoup-broth",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Zoup broth",
+   "price": "$3.99"
+  },
+  {
+   "id": "sendiks-dole-pineapple",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Dole pineapple",
+   "price": "2/$4"
+  },
+  {
+   "id": "sendiks-tones-spices",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Tones spices",
+   "price": "5/$5"
+  },
+  {
+   "id": "sendiks-starbucks-k-cups",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Starbucks K-cups",
+   "price": "$9.99"
+  },
+  {
+   "id": "sendiks-starbucks-bagged-coffee",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Starbucks bagged coffee",
+   "price": "$10.99"
+  },
+  {
+   "id": "sendiks-berres-bros-coffee",
+   "storeId": "sendiks",
+   "department": "Pantry",
+   "name": "Berres Bros coffee",
+   "price": "2/$20"
+  },
+  {
+   "id": "sendiks-lay-s",
+   "storeId": "sendiks",
+   "department": "Snacks",
+   "name": "Lay's",
+   "price": "$2.19"
+  },
+  {
+   "id": "sendiks-pringles",
+   "storeId": "sendiks",
+   "department": "Snacks",
+   "name": "Pringles",
+   "price": "$2.29"
+  },
+  {
+   "id": "sendiks-cheez-it",
+   "storeId": "sendiks",
+   "department": "Snacks",
+   "name": "Cheez-It",
+   "price": "$3.99"
+  },
+  {
+   "id": "sendiks-chex-mix-gardettos-bugles",
+   "storeId": "sendiks",
+   "department": "Snacks",
+   "name": "Chex Mix/Gardettos/Bugles",
+   "price": "2/$5"
+  },
+  {
+   "id": "sendiks-town-house-club",
+   "storeId": "sendiks",
+   "department": "Snacks",
+   "name": "Town House & Club",
+   "price": "2/$7"
+  },
+  {
+   "id": "sendiks-pepsi-12-pk",
+   "storeId": "sendiks",
+   "department": "Drinks",
+   "name": "Pepsi 12 pk",
+   "price": "2/$12"
+  },
+  {
+   "id": "sendiks-coke-6-pk-mini",
+   "storeId": "sendiks",
+   "department": "Drinks",
+   "name": "Coke 6 pk mini",
+   "price": "$4.99"
+  },
+  {
+   "id": "sendiks-ice-mountain-24-pk",
+   "storeId": "sendiks",
+   "department": "Drinks",
+   "name": "Ice Mountain 24 pk",
+   "price": "$4.49"
+  },
+  {
+   "id": "sendiks-ocean-spray-juice",
+   "storeId": "sendiks",
+   "department": "Drinks",
+   "name": "Ocean Spray juice",
+   "price": "2/$6"
+  },
+  {
+   "id": "sendiks-charmin-mega-12-roll",
+   "storeId": "sendiks",
+   "department": "Household",
+   "name": "Charmin Mega 12 roll",
+   "price": "$15.99"
+  },
+  {
+   "id": "sendiks-tide-37-42-oz",
+   "storeId": "sendiks",
+   "department": "Household",
+   "name": "Tide 37–42 oz",
+   "price": "$7.99"
+  },
+  {
+   "id": "sendiks-reynolds-wrap",
+   "storeId": "sendiks",
+   "department": "Household",
+   "name": "Reynolds Wrap",
+   "price": "$5.29"
+  },
+  {
+   "id": "sendiks-glad-cling-wrap",
+   "storeId": "sendiks",
+   "department": "Household",
+   "name": "Glad Cling Wrap",
+   "price": "$3.49"
+  },
+  {
+   "id": "sendiks-dixie-plates-bowls-cups",
+   "storeId": "sendiks",
+   "department": "Household",
+   "name": "Dixie plates/bowls/cups",
+   "price": "2/$6"
+  },
+  {
+   "id": "sendiks-vanity-fair-napkins",
+   "storeId": "sendiks",
+   "department": "Household",
+   "name": "Vanity Fair napkins",
+   "price": "$2.99"
+  },
+  {
+   "id": "sendiks-4-poinsettias",
+   "storeId": "sendiks",
+   "department": "Household",
+   "name": "4\" poinsettias",
+   "price": "$6.99"
+  },
+  {
+   "id": "sendiks-ornaments",
+   "storeId": "sendiks",
+   "department": "Household",
+   "name": "Ornaments",
+   "price": "20% off"
+  },
+  {
+   "id": "sendiks-bollinger-special-cuvee",
+   "storeId": "sendiks",
+   "department": "Wine & spirits",
+   "name": "Bollinger Special Cuvee",
+   "price": "$59.99"
+  },
+  {
+   "id": "sendiks-broccoli-bacon-salad",
+   "storeId": "sendiks",
+   "department": "Deli and prepared foods",
+   "name": "Broccoli bacon salad",
+   "price": "$6.99/lb"
+  },
+  {
+   "id": "sendiks-cranberry-wild-rice-salad",
+   "storeId": "sendiks",
+   "department": "Deli and prepared foods",
+   "name": "Cranberry wild rice salad",
+   "price": "$6.99/lb"
+  },
+  {
+   "id": "sendiks-sundried-tortellini-pasta-salad",
+   "storeId": "sendiks",
+   "department": "Deli and prepared foods",
+   "name": "Sundried tortellini pasta salad",
+   "price": "$6.99/lb"
+  },
+  {
+   "id": "sendiks-kim-crawford-sauvignon-blanc",
+   "storeId": "sendiks",
+   "department": "Wine & spirits",
+   "name": "Kim Crawford Sauvignon Blanc",
+   "price": "$9.99",
+   "conditions": "After $2 rebate"
+  },
+  {
+   "id": "sendiks-joel-gott-cabernet",
+   "storeId": "sendiks",
+   "department": "Wine & spirits",
+   "name": "Joel Gott Cabernet",
+   "price": "$7.99",
+   "conditions": "After $4 rebate on two"
+  },
+  {
+   "id": "sendiks-lagavulin-16",
+   "storeId": "sendiks",
+   "department": "Wine & spirits",
+   "name": "Lagavulin 16",
+   "price": "$69.99",
+   "conditions": "After $5 rebate"
+  },
+  {
+   "id": "outpost-ferndale-natural-whole-turkey",
+   "storeId": "outpost",
+   "department": "Owners Save More",
+   "name": "Ferndale natural whole turkey",
+   "price": "$2.29/lb",
+   "conditions": "Owner price",
+   "regularPrice": "$2.99/lb"
+  },
+  {
+   "id": "outpost-larry-schultz-organic-whole-turkey",
+   "storeId": "outpost",
+   "department": "Owners Save More",
+   "name": "Larry Schultz organic whole turkey",
+   "price": "$3.99/lb",
+   "conditions": "Owner price",
+   "regularPrice": "$4.49/lb"
+  },
+  {
+   "id": "outpost-beeler-s-bone-in-spiral-sliced-ham",
+   "storeId": "outpost",
+   "department": "Owners Save More",
+   "name": "Beeler's bone-in spiral sliced ham",
+   "price": "$5.99/lb",
+   "conditions": "Owner price",
+   "regularPrice": "$7.99/lb"
+  },
+  {
+   "id": "outpost-outpost-pork-breakfast-sausage",
+   "storeId": "outpost",
+   "department": "Owners Save More",
+   "name": "Outpost pork breakfast sausage",
+   "price": "$4.99/lb",
+   "conditions": "Owner price",
+   "regularPrice": "$6.99/lb"
+  },
+  {
+   "id": "outpost-organic-celery",
+   "storeId": "outpost",
+   "department": "Owners Save More",
+   "name": "Organic celery",
+   "price": "$1.69/lb",
+   "conditions": "Owner price",
+   "regularPrice": "$1.99/lb"
+  },
+  {
+   "id": "outpost-organic-winter-squash-all-varieties",
+   "storeId": "outpost",
+   "department": "Owners Save More",
+   "name": "Organic winter squash, all varieties",
+   "price": "$1.49/lb",
+   "conditions": "Owner price",
+   "regularPrice": "$1.99/lb"
+  },
+  {
+   "id": "outpost-del-real-organic-medjool-or-coconut-date-rolls-1",
+   "storeId": "outpost",
+   "department": "Owners Save More",
+   "name": "Del Real organic Medjool or coconut date rolls, 12 oz",
+   "price": "$6.49",
+   "conditions": "Owner price",
+   "regularPrice": "$7.99"
+  },
+  {
+   "id": "outpost-sunridge-farms-organic-brown-wild-rice-bulk",
+   "storeId": "outpost",
+   "department": "Owners Save More",
+   "name": "Sunridge Farms organic brown & wild rice (bulk)",
+   "price": "$5.49/lb",
+   "conditions": "Owner price",
+   "regularPrice": "$6.99/lb"
+  },
+  {
+   "id": "outpost-organic-garnet-or-orange-sweet-potatoes",
+   "storeId": "outpost",
+   "department": "Fresh Deals",
+   "name": "Organic garnet or orange sweet potatoes",
+   "price": "$2.59/lb"
+  },
+  {
+   "id": "outpost-brussels-sprouts",
+   "storeId": "outpost",
+   "department": "Fresh Deals",
+   "name": "Brussels sprouts",
+   "price": "$2.49/lb"
+  },
+  {
+   "id": "outpost-organic-honeycrisp-apples-2-lb-bag",
+   "storeId": "outpost",
+   "department": "Fresh Deals",
+   "name": "Organic Honeycrisp apples, 2 lb bag",
+   "price": "$4.99"
+  },
+  {
+   "id": "outpost-wi-cranberries-12-oz",
+   "storeId": "outpost",
+   "department": "Fresh Deals",
+   "name": "WI cranberries 12 oz",
+   "price": "$2.99"
+  },
+  {
+   "id": "outpost-wholey-cooked-shrimp-ring-10-oz",
+   "storeId": "outpost",
+   "department": "Fresh Deals",
+   "name": "Wholey cooked shrimp ring 10 oz",
+   "price": "$5.99"
+  },
+  {
+   "id": "outpost-brioche-dinner-rolls-12-ct",
+   "storeId": "outpost",
+   "department": "Fresh Deals",
+   "name": "Brioche dinner rolls, 12 ct",
+   "price": "$5.99"
+  },
+  {
+   "id": "outpost-meadowlark-organics-organic-flour-bulk",
+   "storeId": "outpost",
+   "department": "Fresh Deals",
+   "name": "Meadowlark Organics organic flour (bulk)",
+   "price": "15% off"
+  },
+  {
+   "id": "outpost-outpost-whole-pies",
+   "storeId": "outpost",
+   "department": "Fresh Deals",
+   "name": "Outpost whole pies",
+   "price": "$15.99–18.99"
+  },
+  {
+   "id": "outpost-smart-chicken-organic-whole-chicken",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Meat",
+   "name": "Smart Chicken organic whole chicken",
+   "price": "$5.49/lb",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-wellshire-turkey-bacon-12-oz",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Meat",
+   "name": "Wellshire turkey bacon 12 oz",
+   "price": "$7.49",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-wellshire-turkey-kielbasa",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Meat",
+   "name": "Wellshire turkey kielbasa",
+   "price": "$6.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-colameco-s-deli-selection",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Meat",
+   "name": "Colameco's deli selection",
+   "price": "$9.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-organic-valley-raw-block-cheese-8-oz",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Dairy",
+   "name": "Organic Valley raw block cheese 8 oz",
+   "price": "$5.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-califia-plant-heavy-cream",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Dairy",
+   "name": "Califia plant heavy cream",
+   "price": "$4.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-so-delicious-coconut-yogurt-24-oz",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Dairy",
+   "name": "So Delicious coconut yogurt 24 oz",
+   "price": "$5.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-king-arthur-flour-5-lb",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Baking",
+   "name": "King Arthur flour 5 lb",
+   "price": "$4.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-wholesome-organic-sugar",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Baking",
+   "name": "Wholesome organic sugar",
+   "price": "$4.79",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-farmer-s-market-organic-pumpkin-15-oz",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Baking",
+   "name": "Farmer's Market organic pumpkin 15 oz",
+   "price": "$2.69",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-bob-s-red-mill-cornbread-mix",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Baking",
+   "name": "Bob's Red Mill cornbread mix",
+   "price": "$3.69",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-bob-s-red-mill-brownie-or-cake-mix",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Baking",
+   "name": "Bob's Red Mill brownie or cake mix",
+   "price": "$3.69",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-wholly-wholesome-organic-pie-shells-2-pk",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Baking",
+   "name": "Wholly Wholesome organic pie shells 2 pk",
+   "price": "$5.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-immaculate-biscuits-or-crescents",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Baking",
+   "name": "Immaculate biscuits or crescents",
+   "price": "2/$8",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-immaculate-cinnamon-rolls",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Baking",
+   "name": "Immaculate cinnamon rolls",
+   "price": "$5.49",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-lily-s-chips",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Baking",
+   "name": "Lily's chips",
+   "price": "$7.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-guittard-chips",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Baking",
+   "name": "Guittard chips",
+   "price": "$6.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-simply-organic-vanilla-4-oz",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Baking",
+   "name": "Simply Organic vanilla 4 oz",
+   "price": "$14.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-simply-organic-cinnamon",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Baking",
+   "name": "Simply Organic cinnamon",
+   "price": "$4.79",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-pacific-organic-broths-32-oz",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Pantry",
+   "name": "Pacific organic broths 32 oz",
+   "price": "2/$7",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-better-than-bouillon",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Pantry",
+   "name": "Better than Bouillon",
+   "price": "$5.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-cadia-organic-cranberry-sauce",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Pantry",
+   "name": "Cadia organic cranberry sauce",
+   "price": "$2.69",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-simply-organic-gravy-mix",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Pantry",
+   "name": "Simply Organic gravy mix",
+   "price": "$1.69",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-graza-sizzle-olive-oil",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Pantry",
+   "name": "Graza Sizzle olive oil",
+   "price": "$13.49",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-napa-valley-naturals-evoo",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Pantry",
+   "name": "Napa Valley Naturals EVOO",
+   "price": "$16.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-once-again-peanut-butter",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Pantry",
+   "name": "Once Again peanut butter",
+   "price": "$5.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-equal-exchange-coffee",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Pantry",
+   "name": "Equal Exchange coffee",
+   "price": "$11.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-uncle-matt-s-oj-52-oz",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Pantry",
+   "name": "Uncle Matt's OJ 52 oz",
+   "price": "$7.49",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-westbrae-beans",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Pantry",
+   "name": "Westbrae beans",
+   "price": "2/$5",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-bragg-apple-cider-vinegar",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Pantry",
+   "name": "Bragg apple cider vinegar",
+   "price": "$5.49",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-silver-hills-sprouted-bread",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Bread",
+   "name": "Silver Hills sprouted bread",
+   "price": "$3.79",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-little-northern-bakehouse-gluten-free-bread",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Bread",
+   "name": "Little Northern Bakehouse gluten-free bread",
+   "price": "$4.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-field-roast-celebration-roast",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Plant-based",
+   "name": "Field Roast Celebration roast",
+   "price": "$7.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-tofurky-roast",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Plant-based",
+   "name": "Tofurky roast",
+   "price": "$15.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-gardein-turk-y-roast",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Plant-based",
+   "name": "Gardein Turk'y roast",
+   "price": "$14.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-oatly-oatmilk-64-oz",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Plant-based",
+   "name": "Oatly oatmilk 64 oz",
+   "price": "$4.49",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-seventh-generation-dish-soap",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Household",
+   "name": "Seventh Generation dish soap",
+   "price": "$3.69",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-dr-bronner-s-32-oz",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Household",
+   "name": "Dr. Bronner's 32 oz",
+   "price": "$13.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-if-you-care-parchment",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Household",
+   "name": "If You Care parchment",
+   "price": "$5.99",
+   "conditions": "Bay View store's list; Mequon may not carry it"
+  },
+  {
+   "id": "outpost-miller-poultry-bone-in-split-chicken-breast",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Fresh (Bay View)",
+   "name": "Miller Poultry bone-in split chicken breast",
+   "price": "$3.99",
+   "conditions": "Bay View list; may differ at Mequon",
+   "unverified": true
+  },
+  {
+   "id": "outpost-organic-cosmic-crisp-or-honeycrisp-apples",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Fresh (Bay View)",
+   "name": "Organic Cosmic Crisp or Honeycrisp apples",
+   "price": "$2.29",
+   "conditions": "Bay View list; may differ at Mequon",
+   "unverified": true
+  },
+  {
+   "id": "outpost-organic-pears",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Fresh (Bay View)",
+   "name": "Organic pears",
+   "price": "$1.69",
+   "conditions": "Bay View list; may differ at Mequon",
+   "unverified": true
+  },
+  {
+   "id": "outpost-pasture-pride-sharp-cheddar-16-oz",
+   "storeId": "outpost",
+   "department": "Co+op Deals · Fresh (Bay View)",
+   "name": "Pasture Pride sharp cheddar 16 oz",
+   "price": "$7.29",
+   "conditions": "Bay View list; may differ at Mequon",
+   "unverified": true
+  },
+  {
+   "id": "walmart-holiday-meal-basket-feeds-10-26-items-incl-froze",
+   "storeId": "walmart",
+   "department": "Holiday meal",
+   "name": "Holiday meal basket, feeds 10 (26 items incl. frozen Butterball 10–16 lb)",
+   "price": "$35",
+   "conditions": "In stores and online through Dec 24; online prices may differ"
+  }
+ ],
+ "best": [
+  {
+   "dealId": "sendiks-food-club-grade-a-large-eggs"
+  },
+  {
+   "dealId": "picknsave-jennie-o-frozen-grade-a",
+   "note": "Any minimum-purchase requirement not shown in source (unverified)"
+  },
+  {
+   "dealId": "picknsave-butterball-frozen",
+   "note": "Any minimum-purchase requirement not shown in source (unverified)"
+  },
+  {
+   "dealId": "picknsave-kroger-hickory-smoked-spiral-ham"
+  },
+  {
+   "dealId": "picknsave-sweet-potatoes"
+  },
+  {
+   "dealId": "sendiks-wi-russet-potatoes"
+  },
+  {
+   "dealId": "aldi-mega-pack-chicken-wings"
+  },
+  {
+   "dealId": "festival-boneless-half-pork-loin"
+  },
+  {
+   "dealId": "festival-essential-everyday-brown-or-powdered-sugar-2-lb",
+   "note": "Festival One Card (else $2.14); limit 4"
+  },
+  {
+   "dealId": "sendiks-food-club-canned-vegetables"
+  },
+  {
+   "dealId": "sendiks-daily-s-premium-bacon-16-oz"
+  },
+  {
+   "dealId": "sendiks-sendik-s-natural-fresh-ground-round-value-pack"
+  },
+  {
+   "dealId": "picknsave-80-lean-ground-chuck"
+  },
+  {
+   "dealId": "sendiks-gold-medal-flour-5-lb"
+  },
+  {
+   "dealId": "festival-essential-everyday-butter-1-lb"
+  },
+  {
+   "dealId": "sendiks-garlic-roasted-brussels-sprouts"
+  },
+  {
+   "dealId": "sendiks-michigan-honeycrisp-apple-totes"
+  },
+  {
+   "dealId": "sendiks-royal-white-extra-jumbo-raw-ez-peel-shrimp-2-lb-"
+  },
+  {
+   "dealId": "outpost-ferndale-natural-whole-turkey"
+  },
+  {
+   "dealId": "sendiks-hellmann-s-30-oz"
+  }
+ ],
+ "staples": [
+  {
+   "item": "Eggs, large dozen",
+   "cheapestStoreId": "sendiks",
+   "cheapest": "Sendik's $0.99 (limit 4)",
+   "others": "Pick 'n Save Kroger large Grade AA $1.49 (size unverified)"
+  },
+  {
+   "item": "Butter, 1 lb",
+   "cheapestStoreId": "festival",
+   "cheapest": "Festival $2.99",
+   "others": "Pick 'n Save Kroger $1.99 (size unverified); Sendik's Land O Lakes $3.99",
+   "traderJoes": "Butter quarters 16 oz $2.99"
+  },
+  {
+   "item": "Milk",
+   "cheapestStoreId": "picknsave",
+   "cheapest": "Pick 'n Save Roundy's Select $2.49 (size unverified)",
+   "others": "Only one store"
+  },
+  {
+   "item": "Bread",
+   "cheapestStoreId": "picknsave",
+   "cheapest": "Pick 'n Save Kroger $1.99 (size unverified)",
+   "others": "Sendik's sourdough boule 17 oz $3.99; Festival sourdough 20 oz $4.99"
+  },
+  {
+   "item": "Flour, 5 lb",
+   "cheapestStoreId": "sendiks",
+   "cheapest": "Sendik's Gold Medal $3.99",
+   "others": "Outpost King Arthur $4.99 (Co+op Deals)"
+  },
+  {
+   "item": "Whole turkey",
+   "cheapestStoreId": "picknsave",
+   "cheapest": "Pick 'n Save frozen $0.48–0.88/lb",
+   "others": "Aldi Butterball $1.99/lb; Pick 'n Save fresh Butterball $1.49/lb; Festival fresh Jennie-O $2.29/lb; Outpost Ferndale $2.29/lb (owner); Sendik's fresh $2.99/lb",
+   "traderJoes": "Brined fresh $2.49/lb; organic $3.99/lb"
+  },
+  {
+   "item": "Spiral ham",
+   "cheapestStoreId": "picknsave",
+   "cheapest": "Pick 'n Save Kroger $1.99/lb",
+   "others": "Festival Hormel Cure 81 $2.79/lb; Sendik's Hormel Cure 81 $3.49/lb; Outpost Beeler's $5.99/lb (owner)",
+   "traderJoes": "Carver ham $6.49/lb"
+  },
+  {
+   "item": "Chicken",
+   "cheapestStoreId": "aldi",
+   "cheapest": "Aldi wings $1.59/lb",
+   "others": "Festival boneless skinless breast $5.99/lb; Sendik's split wings $3.99/lb"
+  },
+  {
+   "item": "Ground beef",
+   "cheapestStoreId": "picknsave",
+   "cheapest": "Pick 'n Save 80% chuck $4.99/lb",
+   "others": "Sendik's ground round $5.99/lb; Festival 93% $7.99/lb"
+  },
+  {
+   "item": "Chuck roast",
+   "cheapestStoreId": "sendiks",
+   "cheapest": "Sendik's USDA Choice Black Angus $7.99/lb",
+   "others": "Pick 'n Save Black Angus $8.99/lb"
+  },
+  {
+   "item": "Sweet potatoes",
+   "cheapestStoreId": "picknsave",
+   "cheapest": "Pick 'n Save $0.49/lb",
+   "others": "Sendik's $1.29/lb; Festival yams $1.69/lb; Outpost organic $2.59/lb"
+  },
+  {
+   "item": "Potatoes",
+   "cheapestStoreId": "sendiks",
+   "cheapest": "Sendik's russets $0.69/lb",
+   "others": "Festival 5 lb bag $2.99",
+   "traderJoes": "Gold potatoes 5 lb $4.99"
+  },
+  {
+   "item": "Cranberries, 12 oz",
+   "cheapestStoreId": "sendiks",
+   "cheapest": "Sendik's Wetherby 2/$4",
+   "others": "Festival and Outpost $2.99; Pick 'n Save 2/$5 (size unverified)"
+  },
+  {
+   "item": "Honeycrisp apples",
+   "cheapestStoreId": "sendiks",
+   "cheapest": "Sendik's $1.49/lb tote",
+   "others": "Festival $2.99/lb tote; Outpost organic 2 lb bag $4.99"
+  }
+ ],
+ "compare": [
+  {
+   "item": "Whole turkey",
+   "prices": {
+    "picknsave": "Jennie-O frozen $0.48/lb; Butterball frozen $0.88/lb; fresh Butterball $1.49/lb",
+    "aldi": "Butterball $1.99/lb; Plainville organic $3.29/lb",
+    "festival": "Jennie-O fresh 12–20 lb $2.29/lb",
+    "sendiks": "Fresh hen/tom $2.99/lb",
+    "outpost": "Ferndale $2.29/lb; Larry Schultz organic $3.99/lb"
+   },
+   "conditions": "Outpost = owner prices"
+  },
+  {
+   "item": "Turkey breast",
+   "prices": {
+    "picknsave": "Jennie-O $11.99 (unit unverified)",
+    "festival": "Frozen whole breast $2.49/lb",
+    "sendiks": "Fresh whole breast $3.99/lb"
+   }
+  },
+  {
+   "item": "Spiral / bone-in ham",
+   "prices": {
+    "picknsave": "Kroger spiral $1.99/lb",
+    "festival": "Hormel Cure 81 spiral half $2.79/lb; double smoked $3.69/lb",
+    "sendiks": "Hormel Cure 81 spiral half $3.49/lb; Sendik's spiral boneless $5.99/lb",
+    "outpost": "Beeler's spiral $5.99/lb"
+   },
+   "conditions": "Outpost = owner price"
+  },
+  {
+   "item": "Ground beef",
+   "prices": {
+    "picknsave": "80% chuck $4.99/lb",
+    "festival": "93% Black Angus $7.99/lb",
+    "sendiks": "Ground round value pack $5.99/lb"
+   }
+  },
+  {
+   "item": "Boneless chuck roast",
+   "prices": {
+    "picknsave": "Black Angus $8.99/lb",
+    "sendiks": "USDA Choice Black Angus $7.99/lb"
+   }
+  },
+  {
+   "item": "Ribeye roast",
+   "prices": {
+    "picknsave": "Bone-in $11.99/lb",
+    "festival": "Choice $18.99/lb"
+   }
+  },
+  {
+   "item": "Bacon",
+   "prices": {
+    "picknsave": "Oscar Mayer $3.99",
+    "festival": "Hormel Black Label 12–16 oz $5.99",
+    "sendiks": "Daily's 16 oz $3.99; Sendik's uncured 12 oz $5.99"
+   }
+  },
+  {
+   "item": "Pork sausage roll",
+   "prices": {
+    "picknsave": "Jimmy Dean $2.99",
+    "aldi": "Appleton Farms 16 oz $2.89",
+    "festival": "Jimmy Dean 16 oz $4.99",
+    "outpost": "Outpost breakfast sausage $4.99/lb"
+   },
+   "conditions": "Outpost = owner price"
+  },
+  {
+   "item": "Lit'l Smokies",
+   "prices": {
+    "picknsave": "2/$7",
+    "festival": "$3.84"
+   }
+  },
+  {
+   "item": "Cooked shrimp ring/tray",
+   "prices": {
+    "picknsave": "Kroger small tray $5.99",
+    "aldi": "16 oz $9.99",
+    "festival": "Eddie M's 12 oz $9.99",
+    "outpost": "Wholey 10 oz $5.99"
+   }
+  },
+  {
+   "item": "Eggs",
+   "prices": {
+    "picknsave": "Kroger large $1.49",
+    "sendiks": "Food Club large dozen $0.99"
+   },
+   "conditions": "Sendik's limit 4"
+  },
+  {
+   "item": "Butter",
+   "prices": {
+    "picknsave": "Kroger $1.99",
+    "festival": "Essential Everyday 1 lb $2.99",
+    "sendiks": "Land O Lakes 1 lb $3.99"
+   }
+  },
+  {
+   "item": "Cream cheese",
+   "prices": {
+    "picknsave": "Philadelphia $1.99",
+    "festival": "Philadelphia 8 oz $2.99",
+    "sendiks": "Philadelphia 8 oz $2.99"
+   }
+  },
+  {
+   "item": "Shredded cheese",
+   "prices": {
+    "picknsave": "Sargento $1.99",
+    "festival": "Kraft 7–8 oz $2.99",
+    "sendiks": "Sargento 5–8 oz 2/$6"
+   }
+  },
+  {
+   "item": "Sour cream",
+   "prices": {
+    "picknsave": "Kroger 3/$5",
+    "festival": "Daisy 16 oz $2.49",
+    "sendiks": "Daisy 16 oz $2.29"
+   }
+  },
+  {
+   "item": "Coffee-mate",
+   "prices": {
+    "picknsave": "$2.99",
+    "festival": "14–32 oz $4.33",
+    "sendiks": "32 oz $3.99"
+   }
+  },
+  {
+   "item": "Pillsbury biscuits/crescents",
+   "prices": {
+    "picknsave": "$1.99",
+    "festival": "$2.89",
+    "sendiks": "Crescents 2/$5; Grands 2/$6"
+   }
+  },
+  {
+   "item": "Pie crust",
+   "prices": {
+    "picknsave": "Kroger 2/$5",
+    "festival": "Pillsbury refrigerated $3.49; Pet-Ritz frozen $3.99",
+    "sendiks": "Pillsbury refrigerated $3.99; pie shells 2/$6",
+    "outpost": "Wholly Wholesome organic 2 pk $5.99"
+   }
+  },
+  {
+   "item": "Canned pumpkin",
+   "prices": {
+    "picknsave": "Kroger 4/$5",
+    "sendiks": "Libby's 15 oz 2/$4",
+    "outpost": "Farmer's Market organic 15 oz $2.69"
+   }
+  },
+  {
+   "item": "Brown/powdered sugar",
+   "prices": {
+    "picknsave": "Kroger $2",
+    "festival": "Essential Everyday 2 lb $0.99"
+   },
+   "conditions": "Festival: One Card, limit 4"
+  },
+  {
+   "item": "Whipped topping",
+   "prices": {
+    "picknsave": "Cool Whip 2/$4",
+    "aldi": "Friendly Farms 8 oz $1.09",
+    "festival": "Cool Whip 8 oz $1.99",
+    "sendiks": "Cool Whip 8 oz 2/$4"
+   }
+  },
+  {
+   "item": "Reddi-wip",
+   "prices": {
+    "picknsave": "$1.99",
+    "festival": "$3.20",
+    "sendiks": "$2.99"
+   }
+  },
+  {
+   "item": "Heinz gravy",
+   "prices": {
+    "picknsave": "2/$4",
+    "festival": "$2.49",
+    "sendiks": "2/$5"
+   }
+  },
+  {
+   "item": "Campbell's cream soups",
+   "prices": {
+    "picknsave": "10/$10",
+    "festival": "2/$3",
+    "sendiks": "2/$3"
+   }
+  },
+  {
+   "item": "Canned vegetables",
+   "prices": {
+    "picknsave": "Del Monte 10/$10",
+    "festival": "Essential Everyday $0.84",
+    "sendiks": "Food Club 2/$1; Green Giant $0.99"
+   },
+   "conditions": "Sendik's Food Club limit 4"
+  },
+  {
+   "item": "Stove Top",
+   "prices": {
+    "picknsave": "$1.48",
+    "festival": "$1.99",
+    "sendiks": "$2.99"
+   }
+  },
+  {
+   "item": "Ocean Spray cranberry sauce",
+   "prices": {
+    "picknsave": "$2.29",
+    "festival": "$2.57",
+    "sendiks": "2/$4",
+    "outpost": "Cadia organic $2.69"
+   }
+  },
+  {
+   "item": "Fresh cranberries",
+   "prices": {
+    "picknsave": "2/$5",
+    "festival": "12 oz $2.99",
+    "sendiks": "12 oz 2/$4",
+    "outpost": "12 oz $2.99"
+   }
+  },
+  {
+   "item": "Sweet potatoes/yams",
+   "prices": {
+    "picknsave": "$0.49/lb",
+    "festival": "Yams $1.69/lb",
+    "sendiks": "$1.29/lb",
+    "outpost": "Organic $2.59/lb"
+   }
+  },
+  {
+   "item": "Honeycrisp apples",
+   "prices": {
+    "festival": "Tote $2.99/lb",
+    "sendiks": "Tote $1.49/lb",
+    "outpost": "Organic 2 lb $4.99"
+   }
+  },
+  {
+   "item": "Brussels sprouts",
+   "prices": {
+    "festival": "Organic 1 lb $3.99",
+    "sendiks": "$1.99/lb",
+    "outpost": "$2.49/lb"
+   }
+  },
+  {
+   "item": "Mandarins",
+   "prices": {
+    "picknsave": "Cuties $2.99",
+    "festival": "Poppies 2 lb $3.99"
+   }
+  },
+  {
+   "item": "Flour, 5 lb",
+   "prices": {
+    "sendiks": "Gold Medal $3.99",
+    "outpost": "King Arthur $4.99"
+   }
+  },
+  {
+   "item": "Swanson broth",
+   "prices": {
+    "picknsave": "2/$4",
+    "sendiks": "32 oz 2/$4"
+   }
+  },
+  {
+   "item": "Ore-Ida potatoes",
+   "prices": {
+    "picknsave": "$2.99",
+    "festival": "$4.29",
+    "sendiks": "Tater tots $4.99"
+   }
+  },
+  {
+   "item": "Marie Callender's pie",
+   "prices": {
+    "picknsave": "$5.99",
+    "festival": "$6.99"
+   }
+  },
+  {
+   "item": "Bob Evans sides",
+   "prices": {
+    "picknsave": "$2.99",
+    "festival": "$3.99"
+   }
+  },
+  {
+   "item": "Ritz / Nabisco snack crackers",
+   "prices": {
+    "picknsave": "$1.99",
+    "festival": "$3.49"
+   }
+  },
+  {
+   "item": "Town House crackers",
+   "prices": {
+    "picknsave": "$2.99",
+    "festival": "$3.49",
+    "sendiks": "2/$7"
+   }
+  },
+  {
+   "item": "Folgers",
+   "prices": {
+    "picknsave": "$9.99",
+    "festival": "22.6–25.9 oz $14.99"
+   }
+  },
+  {
+   "item": "Hidden Valley Ranch",
+   "prices": {
+    "festival": "20–24 oz $5.37",
+    "sendiks": "20–24 oz $4.99"
+   }
+  },
+  {
+   "item": "Hellmann's",
+   "prices": {
+    "festival": "20–30 oz $6.45",
+    "sendiks": "30 oz $4.99"
+   },
+   "conditions": "Sendik's: $2 digital coupon"
+  },
+  {
+   "item": "Simply orange juice",
+   "prices": {
+    "festival": "46–52 oz $4.49",
+    "sendiks": "46–52 oz $3.99"
+   }
+  },
+  {
+   "item": "Pepsi 12-packs",
+   "prices": {
+    "festival": "$5.99",
+    "sendiks": "2/$12"
+   },
+   "conditions": "Festival: One Card"
+  },
+  {
+   "item": "Lay's chips",
+   "prices": {
+    "festival": "BOGO",
+    "sendiks": "$2.19"
+   }
+  },
+  {
+   "item": "Pringles",
+   "prices": {
+    "festival": "$2.36",
+    "sendiks": "$2.29"
+   }
+  },
+  {
+   "item": "Bellatoria pizza",
+   "prices": {
+    "festival": "$5",
+    "sendiks": "2/$9"
+   }
+  },
+  {
+   "item": "Screamin' Sicilian pizza",
+   "prices": {
+    "picknsave": "$5.99",
+    "sendiks": "$5.99"
+   }
+  },
+  {
+   "item": "Rhodes rolls",
+   "prices": {
+    "festival": "$4.99",
+    "sendiks": "$4.49"
+   }
+  },
+  {
+   "item": "Birds Eye Steamfresh",
+   "prices": {
+    "festival": "$1.37",
+    "sendiks": "2/$3"
+   }
+  },
+  {
+   "item": "Eggo",
+   "prices": {
+    "festival": "$3.79",
+    "sendiks": "2/$6"
+   }
+  },
+  {
+   "item": "Barilla pasta",
+   "prices": {
+    "picknsave": "4/$5",
+    "sendiks": "2/$3"
+   }
+  },
+  {
+   "item": "Celsius",
+   "prices": {
+    "festival": "2/$4",
+    "sendiks": "2/$3"
+   }
+  },
+  {
+   "item": "Veggie tray",
+   "prices": {
+    "aldi": "Taylor Farms 40 oz $8.99",
+    "festival": "Crazy Fresh 26 oz $12.99",
+    "sendiks": "Sendik's tray $5.99/lb"
+   }
+  }
+ ],
+ "gaps": [
+  "Pick 'n Save: prices come from a third-party list, not the official ad; sizes, limits and digital-coupon conditions weren't shown. The source lists Nov 18–26, longer than the usual week; confirm in the app.",
+  "Aldi: end date not stated; Aldi Finds condensed to highlights.",
+  "Outpost: Co+op Deals came from the Bay View store's online list, condensed above to household-relevant items (138 total). Several items show no price (Vital Farms eggs, Organic Valley sliced/shredded cheese, Talenti, Izze, Chomps, Q Mixers, Daiya pizza, Beyond steak tips, Tillen Farms cherries). PDF pages 3–16 weren't read image by image.",
+  "Sendik's: wine and spirits condensed; the website says prices start 11/17 while the ad pages say Nov 18.",
+  "Walmart: no store-level rollback prices.",
+  "Trader Joe's: comparison with last week's doc wasn't possible; the flyer doesn't flag new items.",
+  "Other West Bend stores: none with a current ad found."
+ ],
+ "sources": [
+  {
+   "label": "Sendik's weekly ad (West Bend)",
+   "url": "https://www.sendiks.com/weekly-ad"
+  },
+  {
+   "label": "Outpost sales page and flyer",
+   "url": "https://www.outpost.coop/shop/sales/index.php"
+  },
+  {
+   "label": "Co+op Deals, Outpost Bay View list",
+   "url": "https://www.deals.coop/outpost-natural-foods-co-op-bayview/deals/items"
+  },
+  {
+   "label": "Pick 'n Save price list, WeeklyAdHunters",
+   "url": "https://weeklyadhunters.com/pick-n-save-weekly-ad/"
+  },
+  {
+   "label": "Festival Foods specials",
+   "url": "https://www.festivalfoods.net/specials/search/"
+  },
+  {
+   "label": "This Week at Aldi: Nov 18, 2026, Aldi Reviewer",
+   "url": "https://www.aldireviewer.com/this-week-at-aldi-the-aldi-weekly-ad-for-november-18-2026/"
+  },
+  {
+   "label": "Simplified Trader Joe's Fearless Flyer: Thanksgiving 2026, Aldi Reviewer",
+   "url": "https://www.aldireviewer.com/the-simplified-trader-joes-fearless-flyer-thanksgiving-2026-edition/"
+  },
+  {
+   "label": "Walmart 2026 holiday meal, Grocery Dive",
+   "url": "https://www.grocerydive.com/news/walmart-holiday-meal-2026-cheaper-2025/873073/"
+  }
+ ]
+}

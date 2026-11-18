@@ -1,0 +1,32 @@
+# Builds and deploys to Firebase Hosting on every push to main
+# (including the weekly data commit from the roundup task).
+# Needs two repository secrets (Settings > Secrets and variables > Actions):
+#   FIREBASE_SERVICE_ACCOUNT  - JSON key for a service account with Firebase Hosting Admin
+#   FIREBASE_WEB_CONFIG       - the four VITE_FIREBASE_* lines from .env.example, filled in
+# and one repository variable: FIREBASE_PROJECT_ID
+name: Deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Write web config
+        run: printf '%s\n' "$FIREBASE_WEB_CONFIG" > .env.production.local
+        env:
+          FIREBASE_WEB_CONFIG: ${{ secrets.FIREBASE_WEB_CONFIG }}
+      - run: npm run build
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: ${{ vars.FIREBASE_PROJECT_ID }}
+          channelId: live

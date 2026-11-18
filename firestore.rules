@@ -1,0 +1,30 @@
+rules_version = '2';
+// Each signed-in user can read and write only their own profile and lists.
+// Deal data is not in Firestore; it's a static file served with the site.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isOwner(uid) {
+      return request.auth != null && request.auth.uid == uid;
+    }
+
+    match /users/{uid} {
+      allow read, delete: if isOwner(uid);
+      allow create, update: if isOwner(uid)
+        && request.resource.data.keys().hasOnly(['favoriteStores', 'createdAt'])
+        && (!('favoriteStores' in request.resource.data)
+            || (request.resource.data.favoriteStores is list
+                && request.resource.data.favoriteStores.size() <= 50));
+
+      match /lists/{listId} {
+        allow read, delete: if isOwner(uid);
+        allow create, update: if isOwner(uid)
+          && request.resource.data.keys().hasOnly(['name', 'createdAt', 'updatedAt', 'items'])
+          && request.resource.data.name is string
+          && request.resource.data.name.size() > 0
+          && request.resource.data.name.size() <= 60
+          && request.resource.data.items is list
+          && request.resource.data.items.size() <= 500;
+      }
+    }
+  }
+}
