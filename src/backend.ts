@@ -53,6 +53,10 @@ export function authErrorMessage(e: unknown): string {
     "auth/popup-blocked": "Your browser blocked the sign-in window. Allow pop-ups and try again.",
     "auth/requires-recent-login": "For security, sign out and back in, then try again.",
     "auth/network-request-failed": "Network error. Check your connection.",
+    "auth/configuration-not-found": "Sign-in isn't set up for this site yet. Please try again later.",
+    "auth/operation-not-allowed": "That sign-in method isn't turned on for this site yet.",
+    "auth/unauthorized-domain": "Sign-in isn't allowed from this web address yet.",
+    "permission-denied": "Your account couldn't be saved. Please try again later.",
   };
   return map[code] ?? (e instanceof Error ? e.message : "Something went wrong.");
 }
