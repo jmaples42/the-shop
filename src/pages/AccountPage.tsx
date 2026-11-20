@@ -99,7 +99,7 @@ function SignIn() {
 }
 
 function Profile() {
-  const { user, backend, edition, profile, lists, toast } = useApp();
+  const { user, backend, edition, profile, list, toast } = useApp();
   const [busy, setBusy] = useState(false);
   const favCount = profile.favoriteStores.length;
 
@@ -141,7 +141,7 @@ function Profile() {
           className="btn danger"
           disabled={busy}
           onClick={async () => {
-            if (!confirm(`Delete your account and all ${lists.length} lists? This can't be undone.`)) return;
+            if (!confirm(`Delete your account${list?.items.length ? ` and the ${list.items.length} items on your list` : ""}? This can't be undone.`)) return;
             setBusy(true);
             try {
               await backend!.deleteAccount(user!.uid);

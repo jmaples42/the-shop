@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useApp } from "../state";
-import { DealRow, Loading, StarButton } from "../components";
+import { DealRow, Loading, Masthead, StarButton } from "../components";
 import type { Deal } from "../types";
 
 const FILTER_KEY = "theshop.filter";
@@ -49,8 +49,20 @@ export default function DealsPage() {
     return terms.every((t) => hay.includes(t));
   };
 
-  if (editionError) return <p className="pad error">{editionError}</p>;
-  if (!edition) return <Loading text="Loading this week's deals…" />;
+  if (editionError)
+    return (
+      <div className="page">
+        <Masthead />
+        <p className="pad error">{editionError}</p>
+      </div>
+    );
+  if (!edition)
+    return (
+      <div className="page">
+        <Masthead />
+        <Loading text="Loading this week's deals…" />
+      </div>
+    );
 
   const dealsById = Object.fromEntries(edition.deals.map((d) => [d.id, d]));
   const best = edition.best
@@ -61,14 +73,11 @@ export default function DealsPage() {
 
   return (
     <div className="page">
-      <header className="top">
-        <div className="brand">The Shop</div>
-        <h1>{edition.area} grocery deals</h1>
-        <p className="sub">
-          {edition.title} · {edition.deals.length} items from {edition.stores.length} stores ·{" "}
-          <Link to="/about">About the data</Link>
-        </p>
-      </header>
+      <Masthead />
+      <p className="sub edition-line">
+        Deals for {edition.title} · {edition.deals.length} items from {edition.stores.length} stores ·{" "}
+        <Link to="/about">About the data</Link>
+      </p>
 
       <div className="sticky-tools">
         <label className="search">

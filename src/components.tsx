@@ -39,6 +39,48 @@ export function Sheet({ open, onClose, title, children }: { open: boolean; onClo
   );
 }
 
+// "The Shop" masthead with tagline and the current location.
+export function Masthead() {
+  const { areas, area, setAreaId } = useApp();
+  const [open, setOpen] = useState(false);
+  return (
+    <header className="masthead">
+      <h1 className="wordmark">The Shop</h1>
+      <p className="tagline">Groceries Done Right</p>
+      <div className="location">
+        <span>
+          <span className="loc-label">Location:</span> {area?.name ?? "…"}
+        </span>
+        <button className="link-btn" onClick={() => setOpen(true)}>
+          Change location
+        </button>
+      </div>
+      {open && (
+        <Sheet open onClose={() => setOpen(false)} title="Choose your location">
+          <ul className="picker">
+            {areas.map((a) => (
+              <li key={a.id}>
+                <button
+                  className="picker-item"
+                  aria-current={a.id === area?.id}
+                  onClick={() => {
+                    setAreaId(a.id);
+                    setOpen(false);
+                  }}
+                >
+                  <span>{a.name}</span>
+                  {a.id === area?.id && <span className="muted">Current</span>}
+                </button>
+              </li>
+            ))}
+          </ul>
+          <p className="note">More areas are coming. For now The Shop covers {areas.map((a) => a.name).join(", ")}.</p>
+        </Sheet>
+      )}
+    </header>
+  );
+}
+
 export function StarButton({ storeId, name }: { storeId: string; name: string }) {
   const { user, profile, toggleFavorite, toast } = useApp();
   const navigate = useNavigate();
@@ -65,46 +107,33 @@ export function StarButton({ storeId, name }: { storeId: string; name: string })
 }
 
 export function DealRow({ deal, store, note, showStore }: { deal: Deal; store?: Store; note?: string; showStore?: boolean }) {
-  const { user, lists, addDeal, isSaved, toast } = useApp();
+  const { user, toggleDeal, isOnList, toast } = useApp();
   const navigate = useNavigate();
-  const [picker, setPicker] = useState(false);
   const [busy, setBusy] = useState(false);
-  const saved = isSaved(deal.id);
+  const on = isOnList(deal.id);
   const regular = store?.priceType === "regular";
 
-  async function save(listId?: string) {
-    setBusy(true);
-    try {
-      const id = await addDeal(deal, listId);
-      const name = lists.find((l) => l.id === id)?.name ?? "My list";
-      toast(`Added to ${name}`);
-    } catch (e) {
-      toast(e instanceof Error ? e.message : "Couldn't add. Try again.");
-    } finally {
-      setBusy(false);
-      setPicker(false);
-    }
-  }
-
-  function onAdd() {
+  async function onTap() {
     if (!user) {
-      toast("Sign in to save deals to a list.");
+      toast("Sign in to build your list.");
       navigate("/account");
       return;
     }
-    if (lists.length > 1) setPicker(true);
-    else save();
+    setBusy(true);
+    try {
+      const r = await toggleDeal(deal);
+      toast(r === "added" ? "Added to your list" : "Removed from your list");
+    } catch (e) {
+      toast(e instanceof Error ? e.message : "Couldn't save. Try again.");
+    } finally {
+      setBusy(false);
+    }
   }
 
-  const meta = [
-    showStore ? store?.name : null,
-    deal.conditions,
-    deal.regularPrice ? `Reg. ${deal.regularPrice}` : null,
-    note,
-  ].filter(Boolean);
+  const meta = [showStore ? store?.name : null, deal.conditions, deal.regularPrice ? `Reg. ${deal.regularPrice}` : null, note].filter(Boolean);
 
   return (
-    <li className="deal">
+    <li className={"deal" + (on ? " on-list" : "")}>
       <div className="deal-main">
         <div className="deal-name">{deal.name}</div>
         {(meta.length > 0 || deal.unverified || regular) && (
@@ -117,31 +146,18 @@ export function DealRow({ deal, store, note, showStore }: { deal: Deal; store?: 
       </div>
       <div className={"deal-price" + (regular ? " regular" : "")}>{deal.price}</div>
       <button
-        className={"add-btn" + (saved ? " saved" : "")}
-        onClick={onAdd}
+        className={"add-btn" + (on ? " saved" : "")}
+        onClick={onTap}
         disabled={busy}
-        aria-label={saved ? `${deal.name} is on a list; add again` : `Add ${deal.name} to a list`}
+        aria-pressed={on}
+        aria-label={on ? `Remove ${deal.name} from your list` : `Add ${deal.name} to your list`}
       >
-        {saved ? (
+        {on ? (
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
         ) : (
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
         )}
       </button>
-      {picker && (
-      <Sheet open onClose={() => setPicker(false)} title="Add to which list?">
-        <ul className="picker">
-          {lists.map((l) => (
-            <li key={l.id}>
-              <button className="picker-item" onClick={() => save(l.id)} disabled={busy}>
-                <span>{l.name}</span>
-                <span className="muted">{l.items.length} items</span>
-              </button>
-            </li>
-          ))}
-        </ul>
-      </Sheet>
-      )}
     </li>
   );
 }

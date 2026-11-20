@@ -1,0 +1,5 @@
+{
+  "areas": [
+    { "id": "west-bend-wi", "name": "West Bend, WI", "data": "/data/current.json" }
+  ]
+}
