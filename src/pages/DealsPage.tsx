@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useApp } from "../state";
-import { DealRow, Loading, StarButton } from "../components";
+import { DealRow, Loading, Masthead, StarButton } from "../components";
 import type { Deal } from "../types";
 
 const FILTER_KEY = "theshop.filter";
@@ -15,7 +15,7 @@ function readFilter(): string {
 }
 
 export default function DealsPage() {
-  const { edition, editionError, storesById, profile, user } = useApp();
+  const { edition, editionError, storesById, profile } = useApp();
   const [q, setQ] = useState("");
   // "" = default (my stores if any, else all), "all", "mine", or a store id
   const [filter, setFilter] = useState<string>(readFilter);
@@ -29,7 +29,7 @@ export default function DealsPage() {
   }, [filter]);
 
   const favs = profile.favoriteStores;
-  const hasFavs = Boolean(user) && favs.length > 0;
+  const hasFavs = favs.length > 0;
   const effective = filter === "" ? (hasFavs ? "mine" : "all") : filter === "mine" && !hasFavs ? "all" : filter;
 
   const visibleStores = useMemo(() => {
@@ -49,8 +49,20 @@ export default function DealsPage() {
     return terms.every((t) => hay.includes(t));
   };
 
-  if (editionError) return <p className="pad error">{editionError}</p>;
-  if (!edition) return <Loading text="Loading this week's deals…" />;
+  if (editionError)
+    return (
+      <div className="page">
+        <Masthead />
+        <p className="pad error">{editionError}</p>
+      </div>
+    );
+  if (!edition)
+    return (
+      <div className="page">
+        <Masthead />
+        <Loading text="Loading this week's deals…" />
+      </div>
+    );
 
   const dealsById = Object.fromEntries(edition.deals.map((d) => [d.id, d]));
   const best = edition.best
@@ -61,14 +73,11 @@ export default function DealsPage() {
 
   return (
     <div className="page">
-      <header className="top">
-        <div className="brand">The Shop</div>
-        <h1>{edition.area} grocery deals</h1>
-        <p className="sub">
-          {edition.title} · {edition.deals.length} items from {edition.stores.length} stores ·{" "}
-          <Link to="/about">About the data</Link>
-        </p>
-      </header>
+      <Masthead />
+      <p className="sub edition-line">
+        Deals for {edition.title} · {edition.deals.length} items from {edition.stores.length} stores ·{" "}
+        <Link to="/about">About the data</Link>
+      </p>
 
       <div className="sticky-tools">
         <label className="search">
@@ -82,11 +91,9 @@ export default function DealsPage() {
           />
         </label>
         <div className="chips" role="group" aria-label="Filter by store">
-          {user && (
-            <button className={"chip" + (effective === "mine" ? " on" : "")} onClick={() => setFilter("mine")} aria-pressed={effective === "mine"}>
+          <button className={"chip" + (effective === "mine" ? " on" : "")} onClick={() => setFilter("mine")} aria-pressed={effective === "mine"}>
               ★ My stores{hasFavs ? "" : " (none yet)"}
             </button>
-          )}
           <button className={"chip" + (effective === "all" ? " on" : "")} onClick={() => setFilter("all")} aria-pressed={effective === "all"}>
             All stores
           </button>

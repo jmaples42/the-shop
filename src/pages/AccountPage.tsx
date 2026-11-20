@@ -36,7 +36,7 @@ function SignIn() {
       <header className="top">
         <div className="brand">The Shop</div>
         <h1>{mode === "in" ? "Sign in" : "Create an account"}</h1>
-        <p className="sub">Save shopping lists and pick your stores. Browsing deals doesn't need an account.</p>
+        <p className="sub">Your list and stores are already saved on this device. An account keeps them safe and on all your devices.</p>
       </header>
       <div className="card pad">
         <button className="btn google" disabled={busy} onClick={() => run(() => backend!.signInWithGoogle())}>
@@ -99,7 +99,7 @@ function SignIn() {
 }
 
 function Profile() {
-  const { user, backend, edition, profile, lists, toast } = useApp();
+  const { user, backend, edition, profile, list, toast } = useApp();
   const [busy, setBusy] = useState(false);
   const favCount = profile.favoriteStores.length;
 
@@ -141,7 +141,7 @@ function Profile() {
           className="btn danger"
           disabled={busy}
           onClick={async () => {
-            if (!confirm(`Delete your account and all ${lists.length} lists? This can't be undone.`)) return;
+            if (!confirm(`Delete your account${list?.items.length ? ` and the ${list.items.length} items on your list` : ""}? This can't be undone.`)) return;
             setBusy(true);
             try {
               await backend!.deleteAccount(user!.uid);

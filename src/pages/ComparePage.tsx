@@ -2,11 +2,11 @@ import { useApp } from "../state";
 import { Loading } from "../components";
 
 export default function ComparePage() {
-  const { edition, editionError, storesById, profile, user } = useApp();
+  const { edition, editionError, storesById, profile } = useApp();
   if (editionError) return <p className="pad error">{editionError}</p>;
   if (!edition) return <Loading />;
 
-  const favs = user ? profile.favoriteStores : [];
+  const favs = profile.favoriteStores;
   // Column order: favorites first, then the rest, keeping only stores that appear in the table.
   const inTable = new Set(edition.compare.flatMap((r) => Object.keys(r.prices)));
   const cols = edition.stores

@@ -1,16 +1,15 @@
-import { NavLink, Route, Routes } from "react-router-dom";
+import { Navigate, NavLink, Route, Routes } from "react-router-dom";
 import { useApp } from "./state";
 import DealsPage from "./pages/DealsPage";
 import ComparePage from "./pages/ComparePage";
-import ListsPage from "./pages/ListsPage";
 import ListPage from "./pages/ListPage";
 import AccountPage from "./pages/AccountPage";
 import AboutPage from "./pages/AboutPage";
 
 const tabs = [
   { to: "/", label: "Deals", icon: "M4 6h16M4 12h16M4 18h10", end: true },
+  { to: "/list", label: "My list", icon: "M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01" },
   { to: "/compare", label: "Compare", icon: "M6 20V10M12 20V4M18 20v-6" },
-  { to: "/lists", label: "Lists", icon: "M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01" },
   { to: "/account", label: "Account", icon: "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 20a8 8 0 0 1 16 0" },
 ];
 
@@ -27,8 +26,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<DealsPage />} />
           <Route path="/compare" element={<ComparePage />} />
-          <Route path="/lists" element={<ListsPage />} />
-          <Route path="/lists/:id" element={<ListPage />} />
+          <Route path="/list" element={<ListPage />} />
+          <Route path="/lists/*" element={<Navigate to="/list" replace />} />
           <Route path="/account" element={<AccountPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<DealsPage />} />

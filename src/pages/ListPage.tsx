@@ -1,177 +1,246 @@
-import { useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { useApp } from "../state";
-import { Loading, Sheet } from "../components";
+import { Loading } from "../components";
 import { newKey } from "../backend";
 import type { ListItem } from "../types";
 
+// One shopping list per account, laid out like an Apple Notes checklist:
+// tap the circle when you've got it, and the line stays put but gets highlighted.
+// Deals added from the Deals tab are grouped by store; anything else is typed
+// into the free-form section at the bottom.
 export default function ListPage() {
-  const { id } = useParams();
-  const { user, authReady, lists, listsReady, backend, edition, toast } = useApp();
-  const navigate = useNavigate();
-  const [newItem, setNewItem] = useState("");
-  const [hideChecked, setHideChecked] = useState(false);
-  const [menu, setMenu] = useState(false);
-  const [rename, setRename] = useState("");
+  const { user, authReady, list, listReady, edition, updateItems, toast } = useApp();
+  const [clearArmed, setClearArmed] = useState(false);
 
-  if (!authReady || (user && !listsReady)) return <Loading />;
-  if (!user) {
-    navigate("/lists");
-    return null;
+  if (!authReady || !listReady) return <Loading />;
+
+  const items = list?.items ?? [];
+  const save = (fn: (items: ListItem[]) => ListItem[]) => updateItems(fn).catch((e) => toast(e instanceof Error ? e.message : "Couldn't save."));
+  const toggle = (key: string) => save((all) => all.map((i) => (i.key === key ? { ...i, checked: !i.checked } : i)));
+  const remove = (key: string) => save((all) => all.filter((i) => i.key !== key));
+
+  // Store groups in the order stores appear in this week's data; stores from older weeks after.
+  const storeOrder = (edition?.stores ?? []).map((s) => s.id);
+  const groups = new Map<string, { name: string; items: ListItem[] }>();
+  for (const i of items) {
+    if (!i.storeId) continue;
+    if (!groups.has(i.storeId)) groups.set(i.storeId, { name: i.storeName ?? i.storeId, items: [] });
+    groups.get(i.storeId)!.items.push(i);
   }
-  const list = lists.find((l) => l.id === id);
-  if (!list)
-    return (
-      <div className="page pad">
-        <p>That list doesn't exist anymore.</p>
-        <Link to="/lists">Back to lists</Link>
-      </div>
-    );
-
-  const uid = user.uid;
-  const update = (fn: (items: ListItem[]) => ListItem[]) =>
-    backend!.updateItems(uid, list.id, fn).catch((e) => toast(e instanceof Error ? e.message : "Couldn't save."));
-
-  const toggle = (key: string) => update((items) => items.map((i) => (i.key === key ? { ...i, checked: !i.checked } : i)));
-  const remove = (key: string) => update((items) => items.filter((i) => i.key !== key));
-
-  function addCustom(e: React.FormEvent) {
-    e.preventDefault();
-    const n = newItem.trim();
-    if (!n) return;
-    setNewItem("");
-    update((items) => [...items, { key: newKey(), name: n, checked: false, addedAt: Date.now() }]);
-  }
-
-  // Group by store; custom items go under "Other items".
-  const groups = new Map<string, ListItem[]>();
-  for (const i of list.items) {
-    const g = i.storeName ?? "Other items";
-    if (!groups.has(g)) groups.set(g, []);
-    groups.get(g)!.push(i);
-  }
-  const done = list.items.filter((i) => i.checked).length;
-  const stale = list.items.some((i) => i.edition && edition && i.edition !== edition.edition);
+  const groupIds = [...groups.keys()].sort((a, b) => {
+    const ia = storeOrder.indexOf(a), ib = storeOrder.indexOf(b);
+    return (ia < 0 ? 999 : ia) - (ib < 0 ? 999 : ib);
+  });
+  const freeItems = items.filter((i) => !i.storeId);
+  const got = items.filter((i) => i.checked).length;
+  const stale = items.some((i) => i.edition && edition && i.edition !== edition.edition);
 
   return (
     <div className="page">
-      <header className="top list-top">
-        <Link to="/lists" className="back">
-          ‹ Lists
-        </Link>
-        <div className="title-row">
-          <h1>{list.name}</h1>
-          <button
-            className="btn"
-            onClick={() => {
-              setRename(list.name);
-              setMenu(true);
-            }}
-          >
-            Edit
-          </button>
-        </div>
+      <header className="top">
+        <div className="brand">The Shop</div>
+        <h1>My list</h1>
         <p className="sub">
-          {list.items.length} items{done ? ` · ${done} checked` : ""}
+          {items.length === 0 ? "Nothing on it yet" : `${items.length - got} to get${got ? ` · ${got} got` : ""}`}
         </p>
       </header>
 
-      <form className="inline-form" onSubmit={addCustom}>
-        <input value={newItem} onChange={(e) => setNewItem(e.target.value)} placeholder="Add your own item" aria-label="Add your own item" maxLength={120} />
-        <button className="btn primary" type="submit">
-          Add
-        </button>
-      </form>
-
-      {stale && <p className="pad note">Some items came from an earlier week's ad. Those prices may have ended.</p>}
-
-      {list.items.length === 0 ? (
-        <p className="pad muted">
-          Empty list. Go to <Link to="/">Deals</Link> and tap + to add items.
+      {items.length === 0 && (
+        <p className="note">
+          Tap + on anything in <Link to="/">Deals</Link> to add it here, or type below.
         </p>
-      ) : (
-        <>
-          <label className="toggle pad-x">
-            <input type="checkbox" checked={hideChecked} onChange={(e) => setHideChecked(e.target.checked)} /> Hide checked items
-          </label>
-          {[...groups.entries()].map(([store, items]) => {
-            const shown = hideChecked ? items.filter((i) => !i.checked) : items;
-            if (shown.length === 0) return null;
-            return (
-              <section key={store}>
-                <h2 className="section-h">{store}</h2>
-                <ul className="card checklist">
-                  {shown.map((i) => {
-                    const old = i.edition && edition && i.edition !== edition.edition;
-                    return (
-                      <li key={i.key} className={i.checked ? "done" : undefined}>
-                        <label>
-                          <input type="checkbox" checked={i.checked} onChange={() => toggle(i.key)} />
-                          <span className="box" aria-hidden="true">
-                            <svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.5" /></svg>
-                          </span>
-                          <span className="item-name">
-                            {i.name}
-                            {(i.conditions || old) && (
-                              <small>
-                                {[i.conditions, old ? `From the week of ${fmtDate(i.edition!)}` : null].filter(Boolean).join(" · ")}
-                              </small>
-                            )}
-                          </span>
-                          {i.price && <span className="item-price">{i.price}</span>}
-                        </label>
-                        <button className="icon-btn" onClick={() => remove(i.key)} aria-label={`Remove ${i.name}`}>
-                          ×
-                        </button>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </section>
-            );
-          })}
-          {done > 0 && (
-            <div className="pad">
-              <button className="btn" onClick={() => update((items) => items.filter((i) => !i.checked))}>
-                Remove checked items
-              </button>
-            </div>
-          )}
-        </>
       )}
+      {!user && items.length > 0 && (
+        <p className="guest-note">
+          Your list is saved on this phone. <Link to="/account">Create a free account</Link> to keep it on all your devices.
+        </p>
+      )}
+      {stale && <p className="note">Some deals came from an earlier week's ad. Those prices may have ended.</p>}
 
-      <Sheet open={menu} onClose={() => setMenu(false)} title="Edit list">
-        <form
-          className="stack-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            const n = rename.trim();
-            if (n) backend!.renameList(uid, list.id, n).catch(() => toast("Couldn't rename."));
-            setMenu(false);
-          }}
-        >
-          <label>
-            Name
-            <input value={rename} onChange={(e) => setRename(e.target.value)} maxLength={60} />
-          </label>
-          <button className="btn primary" type="submit">
-            Save
+      {groupIds.map((sid) => {
+        const g = groups.get(sid)!;
+        return (
+          <section key={sid} className="list-section">
+            <h2 className="list-store">{g.name}</h2>
+            <ul className="checklist">
+              {gotLast(g.items).map((i) => {
+                const old = i.edition && edition && i.edition !== edition.edition;
+                return (
+                  <li key={i.key} className={i.checked ? "got" : undefined}>
+                    <CheckCircle checked={i.checked} label={i.name} onToggle={() => toggle(i.key)} />
+                    <div className="line-text" onClick={() => toggle(i.key)}>
+                      <span className="line-name">{i.name}</span>
+                      {(i.conditions || old) && (
+                        <small>{[i.conditions, old ? `From the week of ${fmtDate(i.edition!)}` : null].filter(Boolean).join(" · ")}</small>
+                      )}
+                    </div>
+                    {i.price && <span className="line-price">{i.price}</span>}
+                    <button className="line-remove" onClick={() => remove(i.key)} aria-label={`Remove ${i.name}`}>
+                      ×
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        );
+      })}
+
+      <section className="list-section">
+        <h2 className="list-store">{groupIds.length ? "Everything else" : "My items"}</h2>
+        <FreeForm items={freeItems} save={save} onToggle={toggle} onRemove={remove} />
+      </section>
+
+      {got > 0 && (
+        <div className="pad-y">
+          <button
+            className={"btn" + (clearArmed ? " danger" : "")}
+            onClick={() => {
+              if (!clearArmed) {
+                setClearArmed(true);
+                window.setTimeout(() => setClearArmed(false), 3000);
+                return;
+              }
+              setClearArmed(false);
+              save((all) => all.filter((i) => !i.checked));
+            }}
+          >
+            {clearArmed ? `Tap again to clear ${got} checked` : "Clear checked items"}
           </button>
-        </form>
-        <hr />
-        <button
-          className="btn danger"
-          onClick={async () => {
-            if (!confirm(`Delete “${list.name}”? This can't be undone.`)) return;
-            setMenu(false);
-            await backend!.deleteList(uid, list.id).catch(() => toast("Couldn't delete."));
-            navigate("/lists");
-          }}
-        >
-          Delete list
-        </button>
-      </Sheet>
+        </div>
+      )}
     </div>
+  );
+}
+
+function CheckCircle({ checked, label, onToggle }: { checked: boolean; label: string; onToggle: () => void }) {
+  return (
+    <button className={"circle" + (checked ? " on" : "")} role="checkbox" aria-checked={checked} aria-label={label} onClick={onToggle}>
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M7.5 12.5l3 3 6-6.5" />
+      </svg>
+    </button>
+  );
+}
+
+// Free-form lines, Notes-style: each line is editable in place; there's always an
+// empty line at the bottom. Enter adds the line and moves to a fresh one; clearing a
+// line's text removes it.
+function FreeForm({
+  items,
+  save,
+  onToggle,
+  onRemove,
+}: {
+  items: ListItem[];
+  save: (fn: (items: ListItem[]) => ListItem[]) => Promise<unknown>;
+  onToggle: (key: string) => void;
+  onRemove: (key: string) => void;
+}) {
+  const [draft, setDraft] = useState("");
+  const newLine = useRef<HTMLInputElement>(null);
+
+  function commitNew() {
+    const n = draft.trim();
+    if (!n) return;
+    setDraft("");
+    save((all) => [...all, { key: newKey(), name: n, checked: false, addedAt: Date.now() }]);
+    newLine.current?.focus();
+  }
+
+  // Still-to-get lines, then the line for typing a new item, then the ones already got.
+  const line = (i: ListItem) => (
+    <FreeLine key={i.key} item={i} save={save} onToggle={onToggle} onRemove={onRemove} focusNew={() => newLine.current?.focus()} />
+  );
+  return (
+    <ul className="checklist">
+      {items.filter((i) => !i.checked).map(line)}
+      <li className="new-line">
+        <span className="circle ghost" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /></svg>
+        </span>
+        <input
+          ref={newLine}
+          className="line-input"
+          value={draft}
+          placeholder="Add an item"
+          aria-label="Add an item"
+          maxLength={120}
+          enterKeyHint="enter"
+          onChange={(e) => setDraft(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              commitNew();
+            }
+          }}
+          onBlur={commitNew}
+        />
+      </li>
+      {items.filter((i) => i.checked).map(line)}
+    </ul>
+  );
+}
+
+// Items you've got sink to the bottom of their section, keeping their order otherwise.
+function gotLast(items: ListItem[]): ListItem[] {
+  return [...items.filter((i) => !i.checked), ...items.filter((i) => i.checked)];
+}
+
+function FreeLine({
+  item,
+  save,
+  onToggle,
+  onRemove,
+  focusNew,
+}: {
+  item: ListItem;
+  save: (fn: (items: ListItem[]) => ListItem[]) => Promise<unknown>;
+  onToggle: (key: string) => void;
+  onRemove: (key: string) => void;
+  focusNew: () => void;
+}) {
+  const [text, setText] = useState(item.name);
+  const focused = useRef(false);
+  // Pick up edits made on another device, unless this line is being typed in.
+  useEffect(() => {
+    if (!focused.current) setText(item.name);
+  }, [item.name]);
+
+  function commit() {
+    const n = text.trim();
+    if (!n) onRemove(item.key);
+    else if (n !== item.name) save((all) => all.map((i) => (i.key === item.key ? { ...i, name: n } : i)));
+  }
+
+  return (
+    <li className={item.checked ? "got" : undefined}>
+      <CheckCircle checked={item.checked} label={item.name} onToggle={() => onToggle(item.key)} />
+      <input
+        className="line-input"
+        value={text}
+        aria-label={`Edit ${item.name}`}
+        maxLength={120}
+        onFocus={() => (focused.current = true)}
+        onChange={(e) => setText(e.target.value)}
+        onBlur={() => {
+          focused.current = false;
+          commit();
+        }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            (e.target as HTMLInputElement).blur();
+            focusNew();
+          }
+        }}
+      />
+      <button className="line-remove" onClick={() => onRemove(item.key)} aria-label={`Remove ${item.name}`}>
+        ×
+      </button>
+    </li>
   );
 }
 
