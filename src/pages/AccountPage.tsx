@@ -36,7 +36,7 @@ function SignIn() {
       <header className="top">
         <div className="brand">The Shop</div>
         <h1>{mode === "in" ? "Sign in" : "Create an account"}</h1>
-        <p className="sub">Save shopping lists and pick your stores. Browsing deals doesn't need an account.</p>
+        <p className="sub">Your list and stores are already saved on this device. An account keeps them safe and on all your devices.</p>
       </header>
       <div className="card pad">
         <button className="btn google" disabled={busy} onClick={() => run(() => backend!.signInWithGoogle())}>

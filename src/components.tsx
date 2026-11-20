@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
-import { useNavigate } from "react-router-dom";
 import { useApp } from "./state";
 import type { Deal, Store } from "./types";
 
@@ -82,8 +81,7 @@ export function Masthead() {
 }
 
 export function StarButton({ storeId, name }: { storeId: string; name: string }) {
-  const { user, profile, toggleFavorite, toast } = useApp();
-  const navigate = useNavigate();
+  const { profile, toggleFavorite, toast } = useApp();
   const on = profile.favoriteStores.includes(storeId);
   return (
     <button
@@ -91,11 +89,6 @@ export function StarButton({ storeId, name }: { storeId: string; name: string })
       aria-pressed={on}
       aria-label={on ? `Remove ${name} from my stores` : `Add ${name} to my stores`}
       onClick={() => {
-        if (!user) {
-          toast("Sign in to pick your stores.");
-          navigate("/account");
-          return;
-        }
         toggleFavorite(storeId).catch(() => toast("Couldn't save. Try again."));
       }}
     >
@@ -107,18 +100,12 @@ export function StarButton({ storeId, name }: { storeId: string; name: string })
 }
 
 export function DealRow({ deal, store, note, showStore }: { deal: Deal; store?: Store; note?: string; showStore?: boolean }) {
-  const { user, toggleDeal, isOnList, toast } = useApp();
-  const navigate = useNavigate();
+  const { toggleDeal, isOnList, toast } = useApp();
   const [busy, setBusy] = useState(false);
   const on = isOnList(deal.id);
   const regular = store?.priceType === "regular";
 
   async function onTap() {
-    if (!user) {
-      toast("Sign in to build your list.");
-      navigate("/account");
-      return;
-    }
     setBusy(true);
     try {
       const r = await toggleDeal(deal);

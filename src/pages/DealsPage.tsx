@@ -15,7 +15,7 @@ function readFilter(): string {
 }
 
 export default function DealsPage() {
-  const { edition, editionError, storesById, profile, user } = useApp();
+  const { edition, editionError, storesById, profile } = useApp();
   const [q, setQ] = useState("");
   // "" = default (my stores if any, else all), "all", "mine", or a store id
   const [filter, setFilter] = useState<string>(readFilter);
@@ -29,7 +29,7 @@ export default function DealsPage() {
   }, [filter]);
 
   const favs = profile.favoriteStores;
-  const hasFavs = Boolean(user) && favs.length > 0;
+  const hasFavs = favs.length > 0;
   const effective = filter === "" ? (hasFavs ? "mine" : "all") : filter === "mine" && !hasFavs ? "all" : filter;
 
   const visibleStores = useMemo(() => {
@@ -91,11 +91,9 @@ export default function DealsPage() {
           />
         </label>
         <div className="chips" role="group" aria-label="Filter by store">
-          {user && (
-            <button className={"chip" + (effective === "mine" ? " on" : "")} onClick={() => setFilter("mine")} aria-pressed={effective === "mine"}>
+          <button className={"chip" + (effective === "mine" ? " on" : "")} onClick={() => setFilter("mine")} aria-pressed={effective === "mine"}>
               ★ My stores{hasFavs ? "" : " (none yet)"}
             </button>
-          )}
           <button className={"chip" + (effective === "all" ? " on" : "")} onClick={() => setFilter("all")} aria-pressed={effective === "all"}>
             All stores
           </button>

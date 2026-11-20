@@ -214,3 +214,4 @@ h1 { font-family: var(--font-display); font-weight: 800; font-size: 28px; line-h
 .line-remove { flex: none; width: 36px; height: 36px; border: 0; background: none; color: var(--muted); font-size: 20px; cursor: pointer; border-radius: 8px; opacity: .6; }
 .line-remove:hover, .line-remove:focus-visible { opacity: 1; }
 .pad-y { padding: 16px 0; }
+.guest-note { font-size: 14px; background: var(--accent-soft); border-radius: 10px; padding: 10px 12px; margin: 4px 0 8px; }

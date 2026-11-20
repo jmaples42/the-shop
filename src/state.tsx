@@ -42,6 +42,27 @@ export function useApp(): AppState {
 }
 
 const AREA_KEY = "theshop.area";
+// Guests (not signed in) keep their list and stores on this device; they move
+// into the account the first time the person signs in.
+const GUEST_LIST_KEY = "theshop.guest.list";
+const GUEST_FAVS_KEY = "theshop.guest.favorites";
+
+function readJSON<T>(key: string, fallback: T): T {
+  try {
+    const v = localStorage.getItem(key);
+    return v ? (JSON.parse(v) as T) : fallback;
+  } catch {
+    return fallback;
+  }
+}
+function writeJSON(key: string, value: unknown) {
+  try {
+    if (value === null) localStorage.removeItem(key);
+    else localStorage.setItem(key, JSON.stringify(value));
+  } catch {
+    /* storage unavailable: lasts until reload */
+  }
+}
 const FALLBACK_AREA: Area = { id: "west-bend-wi", name: "West Bend, WI", data: "/data/current.json" };
 
 function readAreaId(): string | null {
@@ -63,9 +84,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [profile, setProfile] = useState<Profile>({ favoriteStores: [] });
   const [lists, setLists] = useState<ShopList[]>([]);
   const [listReady, setListReady] = useState(false);
+  const [profileReady, setProfileReady] = useState(false);
   const [toastMsg, setToastMsg] = useState<string | null>(null);
   const toastTimer = useRef<number | undefined>(undefined);
   const creating = useRef<Promise<string> | null>(null);
+  const [guestItems, setGuestItems] = useState<ListItem[]>(() => readJSON<ListItem[]>(GUEST_LIST_KEY, []));
+  const [guestFavs, setGuestFavs] = useState<string[]>(() => readJSON<string[]>(GUEST_FAVS_KEY, []));
+  const merged = useRef<string | null>(null);
 
   useEffect(() => {
     fetch("/data/areas.json", { cache: "no-cache" })
@@ -109,9 +134,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
       setProfile({ favoriteStores: [] });
       setLists([]);
       setListReady(false);
+      setProfileReady(false);
       return;
     }
-    const a = backend.watchProfile(user.uid, setProfile);
+    const a = backend.watchProfile(user.uid, (p) => {
+      setProfile(p);
+      setProfileReady(true);
+    });
     const b = backend.watchLists(user.uid, (l) => {
       setLists(l);
       setListReady(true);
@@ -122,33 +151,78 @@ export function AppProvider({ children }: { children: ReactNode }) {
     };
   }, [backend, user]);
 
+  const toast = useCallback((msg: string) => {
+    setToastMsg(msg);
+    window.clearTimeout(toastTimer.current);
+    toastTimer.current = window.setTimeout(() => setToastMsg(null), 2600);
+  }, []);
+
   // The oldest list is "the" list (accounts made before single-list mode may have several).
-  const list = useMemo(() => (lists.length ? [...lists].sort((a, b) => a.createdAt - b.createdAt)[0] : null), [lists]);
+  const accountList = useMemo(() => (lists.length ? [...lists].sort((a, b) => a.createdAt - b.createdAt)[0] : null), [lists]);
+  const guestList = useMemo<ShopList>(() => ({ id: "guest", name: "My list", createdAt: 0, updatedAt: 0, items: guestItems }), [guestItems]);
+  const list = user ? accountList : guestList;
+  const effectiveProfile = useMemo<Profile>(() => (user ? profile : { favoriteStores: guestFavs }), [user, profile, guestFavs]);
 
   const ensureList = useCallback(async (): Promise<string> => {
-    if (!backend || !user) throw new Error("Sign in to save your list.");
-    if (list) return list.id;
+    if (!backend || !user) throw new Error("Not signed in.");
+    if (accountList) return accountList.id;
     if (!creating.current) {
       creating.current = backend.createList(user.uid, "My list").finally(() => {
         creating.current = null;
       });
     }
     return creating.current;
-  }, [backend, user, list]);
+  }, [backend, user, accountList]);
 
   const updateItems = useCallback(
     async (fn: (items: ListItem[]) => ListItem[]) => {
+      if (!user) {
+        setGuestItems((cur) => {
+          const next = fn(cur);
+          writeJSON(GUEST_LIST_KEY, next);
+          return next;
+        });
+        return;
+      }
       const id = await ensureList();
-      await backend!.updateItems(user!.uid, id, fn);
+      await backend!.updateItems(user.uid, id, fn);
     },
     [ensureList, backend, user],
   );
 
-  const toast = useCallback((msg: string) => {
-    setToastMsg(msg);
-    window.clearTimeout(toastTimer.current);
-    toastTimer.current = window.setTimeout(() => setToastMsg(null), 2600);
-  }, []);
+  // First time a person signs in on this device: move the guest list and stores into the account.
+  useEffect(() => {
+    if (!backend || !user || !listReady || !profileReady || merged.current === user.uid) return;
+    merged.current = user.uid;
+    const items = readJSON<ListItem[]>(GUEST_LIST_KEY, []);
+    const favs = readJSON<string[]>(GUEST_FAVS_KEY, []);
+    if (!items.length && !favs.length) return;
+    (async () => {
+      try {
+        if (items.length) {
+          const id = await ensureList();
+          await backend.updateItems(user.uid, id, (cur) => {
+            const has = (g: ListItem) =>
+              cur.some((c) => (g.dealId ? c.dealId === g.dealId && c.edition === g.edition : !c.dealId && c.name.toLowerCase() === g.name.toLowerCase()));
+            return [...cur, ...items.filter((g) => !has(g))];
+          });
+        }
+        if (favs.length) {
+          const union = [...new Set([...profile.favoriteStores, ...favs])];
+          await backend.setFavorites(user.uid, union);
+        }
+        writeJSON(GUEST_LIST_KEY, null);
+        writeJSON(GUEST_FAVS_KEY, null);
+        setGuestItems([]);
+        setGuestFavs([]);
+        toast("Your list is saved to your account.");
+      } catch {
+        merged.current = null; // try again next time
+        toast("Couldn't move your list into your account. It's still on this device.");
+      }
+    })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [backend, user, listReady, profileReady]);
 
   const storesById = useMemo(() => Object.fromEntries((edition?.stores ?? []).map((s) => [s.id, s])), [edition]);
 
@@ -188,12 +262,17 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const toggleFavorite = useCallback(
     async (storeId: string) => {
-      if (!backend || !user) return;
-      const cur = profile.favoriteStores;
+      const cur = effectiveProfile.favoriteStores;
+      if (!backend || !user) {
+        const next = cur.includes(storeId) ? cur.filter((s) => s !== storeId) : [...cur, storeId];
+        setGuestFavs(next);
+        writeJSON(GUEST_FAVS_KEY, next);
+        return;
+      }
       const next = cur.includes(storeId) ? cur.filter((s) => s !== storeId) : [...cur, storeId];
       await backend.setFavorites(user.uid, next);
     },
-    [backend, user, profile],
+    [backend, user, effectiveProfile],
   );
 
   const value: AppState = {
@@ -206,9 +285,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
     storesById,
     authReady,
     user,
-    profile,
+    profile: effectiveProfile,
     list,
-    listReady,
+    listReady: user ? listReady : true,
     toast,
     toastMsg,
     isOnList: (id) => onList.has(id),

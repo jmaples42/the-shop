@@ -13,23 +13,7 @@ export default function ListPage() {
   const { user, authReady, list, listReady, edition, updateItems, toast } = useApp();
   const [clearArmed, setClearArmed] = useState(false);
 
-  if (!authReady) return <Loading />;
-  if (!user)
-    return (
-      <div className="page">
-        <header className="top">
-          <div className="brand">The Shop</div>
-          <h1>My list</h1>
-        </header>
-        <div className="card pad empty">
-          <p>Sign in to build your shopping list: add deals from the Deals tab, type in anything else you need, and check things off in the store.</p>
-          <Link className="btn primary" to="/account">
-            Sign in or create an account
-          </Link>
-        </div>
-      </div>
-    );
-  if (!listReady) return <Loading />;
+  if (!authReady || !listReady) return <Loading />;
 
   const items = list?.items ?? [];
   const save = (fn: (items: ListItem[]) => ListItem[]) => updateItems(fn).catch((e) => toast(e instanceof Error ? e.message : "Couldn't save."));
@@ -65,6 +49,11 @@ export default function ListPage() {
       {items.length === 0 && (
         <p className="note">
           Tap + on anything in <Link to="/">Deals</Link> to add it here, or type below.
+        </p>
+      )}
+      {!user && items.length > 0 && (
+        <p className="guest-note">
+          Your list is saved on this phone. <Link to="/account">Create a free account</Link> to keep it on all your devices.
         </p>
       )}
       {stale && <p className="note">Some deals came from an earlier week's ad. Those prices may have ended.</p>}
