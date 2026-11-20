@@ -64,7 +64,7 @@ export default function ListPage() {
           <section key={sid} className="list-section">
             <h2 className="list-store">{g.name}</h2>
             <ul className="checklist">
-              {g.items.map((i) => {
+              {gotLast(g.items).map((i) => {
                 const old = i.edition && edition && i.edition !== edition.edition;
                 return (
                   <li key={i.key} className={i.checked ? "got" : undefined}>
@@ -150,11 +150,13 @@ function FreeForm({
     newLine.current?.focus();
   }
 
+  // Still-to-get lines, then the line for typing a new item, then the ones already got.
+  const line = (i: ListItem) => (
+    <FreeLine key={i.key} item={i} save={save} onToggle={onToggle} onRemove={onRemove} focusNew={() => newLine.current?.focus()} />
+  );
   return (
     <ul className="checklist">
-      {items.map((i) => (
-        <FreeLine key={i.key} item={i} save={save} onToggle={onToggle} onRemove={onRemove} focusNew={() => newLine.current?.focus()} />
-      ))}
+      {items.filter((i) => !i.checked).map(line)}
       <li className="new-line">
         <span className="circle ghost" aria-hidden="true">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /></svg>
@@ -177,8 +179,14 @@ function FreeForm({
           onBlur={commitNew}
         />
       </li>
+      {items.filter((i) => i.checked).map(line)}
     </ul>
   );
+}
+
+// Items you've got sink to the bottom of their section, keeping their order otherwise.
+function gotLast(items: ListItem[]): ListItem[] {
+  return [...items.filter((i) => !i.checked), ...items.filter((i) => i.checked)];
 }
 
 function FreeLine({
