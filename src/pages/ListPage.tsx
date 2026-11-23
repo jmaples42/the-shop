@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { useApp } from "../state";
+import { itemArea, useApp } from "../state";
 import { Loading } from "../components";
 import { newKey } from "../backend";
 import type { ListItem } from "../types";
@@ -10,7 +10,11 @@ import type { ListItem } from "../types";
 // Deals added from the Deals tab are grouped by store; anything else is typed
 // into the free-form section at the bottom.
 export default function ListPage() {
-  const { user, authReady, list, listReady, edition, updateItems, toast } = useApp();
+  const { user, authReady, list, listReady, edition, area, areas, updateItems, toast } = useApp();
+  const areaName = (id: string) => areas.find((a) => a.id === id)?.name ?? id;
+  // An item from an earlier week of the area you're looking at may have expired.
+  const isOld = (i: ListItem) => Boolean(i.edition && edition && itemArea(i) === area?.id && i.edition < edition.edition);
+  const otherArea = (i: ListItem) => Boolean(i.dealId && area && itemArea(i) !== area.id);
   const [clearArmed, setClearArmed] = useState(false);
 
   if (!authReady || !listReady) return <Loading />;
@@ -20,13 +24,15 @@ export default function ListPage() {
   const toggle = (key: string) => save((all) => all.map((i) => (i.key === key ? { ...i, checked: !i.checked } : i)));
   const remove = (key: string) => save((all) => all.filter((i) => i.key !== key));
 
-  // Store groups in the order stores appear in this week's data; stores from older weeks after.
+  // Store groups in the order stores appear in this week's data; stores from other areas or weeks after.
   const storeOrder = (edition?.stores ?? []).map((s) => s.id);
   const groups = new Map<string, { name: string; items: ListItem[] }>();
   for (const i of items) {
     if (!i.storeId) continue;
-    if (!groups.has(i.storeId)) groups.set(i.storeId, { name: i.storeName ?? i.storeId, items: [] });
-    groups.get(i.storeId)!.items.push(i);
+    const key = otherArea(i) ? `${itemArea(i)}:${i.storeId}` : i.storeId;
+    const name = (i.storeName ?? i.storeId) + (otherArea(i) ? ` · ${areaName(itemArea(i))}` : "");
+    if (!groups.has(key)) groups.set(key, { name, items: [] });
+    groups.get(key)!.items.push(i);
   }
   const groupIds = [...groups.keys()].sort((a, b) => {
     const ia = storeOrder.indexOf(a), ib = storeOrder.indexOf(b);
@@ -34,7 +40,7 @@ export default function ListPage() {
   });
   const freeItems = items.filter((i) => !i.storeId);
   const got = items.filter((i) => i.checked).length;
-  const stale = items.some((i) => i.edition && edition && i.edition !== edition.edition);
+  const stale = items.some(isOld);
 
   return (
     <div className="page">
@@ -65,7 +71,7 @@ export default function ListPage() {
             <h2 className="list-store">{g.name}</h2>
             <ul className="checklist">
               {gotLast(g.items).map((i) => {
-                const old = i.edition && edition && i.edition !== edition.edition;
+                const old = isOld(i);
                 return (
                   <li key={i.key} className={i.checked ? "got" : undefined}>
                     <CheckCircle checked={i.checked} label={i.name} onToggle={() => toggle(i.key)} />

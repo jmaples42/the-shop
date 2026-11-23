@@ -4,6 +4,9 @@ import { getBackend, newKey } from "./backend";
 import type { Backend } from "./backend";
 import type { AppUser, Deal, Edition, ListItem, Profile, ShopList, Store } from "./types";
 
+export const DEFAULT_AREA_ID = "west-bend-wi";
+export const itemArea = (i: ListItem) => i.areaId ?? DEFAULT_AREA_ID;
+
 export interface Area {
   id: string;
   name: string;
@@ -228,15 +231,17 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const onList = useMemo(() => {
     const ids = new Set<string>();
-    for (const i of list?.items ?? []) if (i.dealId && i.edition === edition?.edition) ids.add(i.dealId);
+    for (const i of list?.items ?? [])
+      if (i.dealId && i.edition === edition?.edition && itemArea(i) === area?.id) ids.add(i.dealId);
     return ids;
-  }, [list, edition]);
+  }, [list, edition, area]);
 
   const toggleDeal = useCallback(
     async (deal: Deal) => {
       if (!edition) throw new Error("Deals are still loading.");
       const ed = edition.edition;
-      const same = (i: ListItem) => i.dealId === deal.id && i.edition === ed;
+      const areaId = area?.id ?? DEFAULT_AREA_ID;
+      const same = (i: ListItem) => i.dealId === deal.id && i.edition === ed && itemArea(i) === areaId;
       if (onList.has(deal.id)) {
         await updateItems((items) => items.filter((i) => !same(i)));
         return "removed" as const;
@@ -249,6 +254,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         addedAt: Date.now(),
         dealId: deal.id,
         edition: ed,
+        areaId,
         storeId: deal.storeId,
         storeName: store?.name ?? deal.storeId,
         price: deal.price,
@@ -257,7 +263,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       await updateItems((items) => (items.some(same) ? items : [...items, item]));
       return "added" as const;
     },
-    [edition, onList, storesById, updateItems],
+    [edition, area, onList, storesById, updateItems],
   );
 
   const toggleFavorite = useCallback(

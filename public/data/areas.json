@@ -1,5 +1,6 @@
 {
   "areas": [
-    { "id": "west-bend-wi", "name": "West Bend, WI", "data": "/data/current.json" }
+    { "id": "west-bend-wi", "name": "West Bend, WI", "data": "/data/current.json" },
+    { "id": "chicago-il", "name": "Chicago, IL", "data": "/data/chicago-il/current.json" }
   ]
 }
