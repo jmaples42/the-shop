@@ -1,0 +1,6 @@
+{
+  "_about": "Regions Desk chain keys whose store id in the app differs. Every other chain key is used as the store id unchanged. Never change an existing entry: saved lists and starred stores refer to these ids.",
+  "pick-n-save": "picknsave",
+  "festival-foods": "festival",
+  "trader-joes": "traderjoes"
+}
