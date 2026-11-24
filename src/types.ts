@@ -53,6 +53,7 @@ export interface ListItem {
   // Present when the item came from a deal. Copied in, because deals expire each week.
   dealId?: string;
   edition?: string;
+  areaId?: string; // area the deal came from; items saved before areas existed are West Bend
   storeId?: string;
   storeName?: string;
   price?: string;

@@ -75,7 +75,7 @@ export default function DealsPage() {
     <div className="page">
       <Masthead />
       <p className="sub edition-line">
-        Deals for {edition.title} · {edition.deals.length} items from {edition.stores.length} stores ·{" "}
+        Deals for {edition.title} · {edition.deals.length.toLocaleString("en-US")} items from {edition.stores.length} stores ·{" "}
         <Link to="/about">About the data</Link>
       </p>
 

@@ -1,11 +1,28 @@
 # Weekly deals data format (schemaVersion 1)
 
-Each week the roundup task writes two identical files:
+## Areas
 
-- `public/data/<edition>.json`: the archive copy, e.g. `public/data/2026-11-18.json`
-- `public/data/current.json`: what the app loads
+`public/data/areas.json` lists the areas people can pick under **Change location**:
 
-`npm run validate` (also run by `npm run build`) checks `current.json` against the rules below and fails the build if anything is wrong.
+```json
+{ "areas": [
+  { "id": "west-bend-wi", "name": "West Bend, WI", "data": "/data/current.json" },
+  { "id": "chicago-il",   "name": "Chicago, IL",   "data": "/data/chicago-il/current.json" }
+] }
+```
+
+Each area's weekly roundup writes two identical files in that area's folder:
+
+| Area | Archive copy | What the app loads |
+|---|---|---|
+| West Bend | `public/data/<edition>.json` | `public/data/current.json` |
+| Any other area | `public/data/<area id>/<edition>.json` | `public/data/<area id>/current.json` |
+
+(West Bend keeps the top-level paths it started with.) To add an area: add its folder and files, then add one line to `areas.json`. Area ids never change once published, because saved list items record them.
+
+`npm run validate` (also run by `npm run build`) checks every area's `current.json` against the rules below and fails the build if anything is wrong.
+
+Store ids are per area, but a chain present in several areas uses the same id everywhere (`aldi`, `traderjoes`), so a starred store carries across areas. Chicago ids: `jewel-osco`, `marianos`, `petes-fresh`, `cermak`, `target`, `whole-foods`, `tonys-fresh`, `aldi`, `traderjoes`.
 
 ## Top level
 

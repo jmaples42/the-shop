@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "npm run validate && tsc -b && vite build",
     "preview": "vite preview",
-    "validate": "node scripts/validate-deals.mjs public/data/current.json",
+    "validate": "node scripts/validate-deals.mjs public/data/areas.json",
     "typecheck": "tsc -b"
   },
   "dependencies": {

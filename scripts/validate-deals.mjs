@@ -4,11 +4,34 @@
 // Exits non-zero with a list of problems, so a bad file never ships.
 import { readFileSync } from "node:fs";
 
-const file = process.argv[2];
-if (!file) {
-  console.error("usage: validate-deals.mjs <file.json>");
+const arg = process.argv[2];
+if (!arg) {
+  console.error("usage: validate-deals.mjs <deals.json | areas.json>");
   process.exit(2);
 }
+
+// Given areas.json, validate every area's current file.
+if (arg.endsWith("areas.json")) {
+  const { execFileSync } = await import("node:child_process");
+  const { areas } = JSON.parse(readFileSync(arg, "utf8"));
+  const ids = new Set();
+  let failed = false;
+  for (const a of areas) {
+    if (!a.id || !a.name || !a.data || ids.has(a.id)) {
+      console.error(`${arg}: each area needs a unique id, a name and a data path (${JSON.stringify(a)})`);
+      process.exit(1);
+    }
+    ids.add(a.id);
+    try {
+      execFileSync(process.execPath, [process.argv[1], "public" + a.data], { stdio: "inherit" });
+    } catch {
+      failed = true;
+    }
+  }
+  process.exit(failed ? 1 : 0);
+}
+
+const file = arg;
 let d;
 try {
   d = JSON.parse(readFileSync(file, "utf8"));
